@@ -47,7 +47,7 @@ function App() {
         </ul>
       </div>
       {/*Home Page*/}
-      <div className="w-screen h-screeen p-10">
+      <section className="w-screen h-screeen p-10">
         <h1 className="font-semibold text-[44px] font-poppins leading-[66px] text-darkGray mt-5">
           CRAFTING THE BEST
           <br />
@@ -88,7 +88,7 @@ function App() {
           className="mt-5"
           src={require("./assets/header-image.jpg")}
         />
-      </div>
+      </section>
     </div>
   );
 }
