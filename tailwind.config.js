@@ -15,6 +15,7 @@ module.exports = {
         darkGray: "#45505b",
         brown: "#fec245",
         orange: "#ff5828",
+        whitebg: "rgba(255, 255, 255, 0.8)",
       },
       fontFamily: {
         poppins: ["Poppins"],

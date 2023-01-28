@@ -1,74 +1,100 @@
 import React, { useReducer, useState } from "react";
 import "./App.css";
 import { IonIcon } from "react-ion-icon";
-import NavbarReducer from "./reducer/NavbarReducer";
 
 function App() {
-  const initialState = false;
   const [open, setOpen] = useState(false);
   const [isShownHome, setIsShownHome] = useState(false);
   const [isShownAbout, setIsShownAbout] = useState(false);
   const [isShownResume, setIsShownResume] = useState(false);
   const [isShownPortfolio, setIsShownPortfolio] = useState(false);
   const [isShownContacts, setIsShownContacts] = useState(false);
-  const [falseKamuna, setFalseKamuna] = useState(true);
-  const [state, dispatch] = useReducer(NavbarReducer, initialState);
+
+  function home() {
+    setOpen(!open);
+    setIsShownHome(true);
+    setIsShownAbout(false);
+    setIsShownResume(false);
+    setIsShownPortfolio(false);
+    setIsShownContacts(false);
+  }
+  function about() {
+    setOpen(!open);
+    setIsShownHome(false);
+    setIsShownAbout(true);
+    setIsShownResume(false);
+    setIsShownPortfolio(false);
+    setIsShownContacts(false);
+  }
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div
         className={`${
           open ? "bg-darkCyan" : "bg-transparent"
-        } w-10 h-10 duration-300 rounded-full flex items-center justify-center absolute right-3 top-3 
+        } w-10 h-10 duration-300 rounded-full fixed flex items-center justify-center right-3 top-3 
         lg:invisible`}
       >
         <IonIcon
           color={`${open ? "primary" : "secondary"}`}
-          onClick={() => setOpen(!open)}
+          onClick={() =>
+            setOpen(
+              !open,
+              setIsShownHome(isShownHome),
+              setIsShownAbout(isShownAbout),
+              setIsShownResume(isShownResume)
+            )
+          }
           name={open ? "close" : "menu"}
         ></IonIcon>
       </div>
       <div
         className={`${
           open ? "left-[0px] w-[300px]" : "left-[-300px]"
-        } duration-500 h-screen border bg-white z-50 border-gray-100 absolute 
-       lg:w-[100px] lg:left-0 lg:border-none `}
+        } duration-500 h-screen border bg-white z-50 border-gray-100 fixed 
+       lg:w-[100px] lg:left-0 lg:border-none lg:bg-transparent`}
       >
         <ul
           className="h-screen w-full flex flex-col items-center justify-center gap-2
         lg:flex lg:flex-col lg:items-start lg:pl-5"
         >
-          <li
-            // onClick={() => dispatch({ type: "ACTIONS.HOME" })}
-            onMouseEnter={() => setIsShownHome(true)}
-            onMouseLeave={() => setIsShownHome(false)}
-            className={`${
-              falseKamuna ? "bg-whitesmoke" : "bg-darkCyan"
-            } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1 
+          <a href="#homepage" onClick={home}>
+            <li
+              onMouseEnter={() => setIsShownHome(true)}
+              onMouseLeave={() => setIsShownHome(false)}
+              className={`${
+                isShownHome
+                  ? "bg-darkCyan text-white"
+                  : "bg-whitesmoke"
+              } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1 
             lg:w-[56px] lg: lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
             lg:hover:bg-darkCyan`}
-          >
-            <img
-              className={`${isShownHome ? "invert" : "invert-0"}`}
-              src={require("./assets/home.png")}
-            />
-            Home
-          </li>
-          <li
-            onMouseEnter={() => setIsShownAbout(true)}
-            onMouseLeave={() => setIsShownAbout(false)}
-            // onClick={() => dispatch({ type: "ACTIONS.ABOUT" })}
-            className={`${
-              falseKamuna ? "bg-whitesmoke" : "bg-darkCyan"
-            } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
+            >
+              <img
+                className={`${isShownHome ? "invert" : "invert-0"}`}
+                src={require("./assets/home.png")}
+              />
+              Home
+            </li>
+          </a>
+          <a href="#aboutpage" onClick={about}>
+            <li
+              onMouseEnter={() => setIsShownAbout(true)}
+              onMouseLeave={() => setIsShownAbout(false)}
+              className={`${
+                isShownAbout
+                  ? "bg-darkCyan text-white"
+                  : "bg-whitesmoke"
+              } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
             lg:w-[56px] lg: lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
             lg:hover:bg-darkCyan`}
-          >
-            <img
-              className={`${isShownAbout ? "invert" : "invert-0"}`}
-              src={require("./assets/profile.png")}
-            />
-            About
-          </li>
+            >
+              <img
+                className={`${isShownAbout ? "invert" : "invert-0"}`}
+                src={require("./assets/profile.png")}
+              />
+              About
+            </li>
+          </a>
           <li
             onMouseEnter={() => setIsShownResume(true)}
             onMouseLeave={() => setIsShownResume(false)}
@@ -114,12 +140,13 @@ function App() {
       </div>
       {/*Home Page*/}
       <section
-        className="w-screen h-screeen p-10 
+        id="homepage"
+        className="w-screen h-screeen p-10  bg-whitebg
       md:flex md:h-screen md:flex-col md:justify-center md:items-center 
       lg:flex lg:flex-row lg:gap-10 lg:items-center lg:justify-center"
       >
         <div>
-          <h1 className="font-semibold text-[44px] font-poppins leading-[66px] text-darkGray mt-5 lg:text-[60px] lg:leading-[70px]">
+          <h1 className="font-semibold text-[44px] font-poppins leading-[66px] text-darkGray mt-5 lg:text-[55px] lg:leading-[70px]">
             CRAFTING THE BEST
             <br />
             ONLINE EXPERIENCE
@@ -170,6 +197,86 @@ function App() {
         </div>
       </section>
       {/*About Page*/}
+      <section
+        id="aboutpage"
+        className="w-screen h-screen flex flex-col items-center p-8"
+      >
+        <h2 className="text-[32px] font-bold font-poppins uppercase mt-2 mb-[10px]">
+          ABOUT
+        </h2>
+        <div className="flex items-center justify-center">
+          <hr className="w-9 border border-gray" />
+          <hr className="w-11 border-[2px] border-darkCyan" />
+          <hr className="w-9 border border-gray" />
+        </div>
+        <p className="text-[16px] leading-[35px] text-justify font-poppins mt-5">
+          I am a talented, ambitious and hardworking individual, with
+          broad skills and experience in mobile and web developing,
+          social media and leading projects. A key strength is
+          communication; building strong relationships with people in
+          order to deliver the best results.
+        </p>
+        <img
+          className="shadow-md mt-2"
+          src={require("./assets/iconics.jpg")}
+        />
+        <div>
+          <h3 className="font-poppins text-[26px] mt-2 font-bold">
+            Front-End Web Developer
+          </h3>
+          <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
+            Exceptionally creative and dependable Entry Level Web
+            Developer with a stellar customer service record and
+            superb work ethic. Broadly and deeply knowledgeable in a
+            wide variety of computer languages as well as the
+            principles and techniques of website construction and
+            maintenance.
+          </p>
+        </div>
+        <div className="text-[16px] font-poppins leading-[35px] mt-2">
+          <ul className="list-disc">
+            <li>
+              <span className="font-bold">Birthday: </span> 13
+              September 2000
+            </li>
+            <li>
+              <span className="font-bold">Website: </span>{" "}
+              https://github.com/vjastoni
+            </li>
+            <li>
+              <span className="font-bold">Phone: </span> 09452272264
+            </li>
+            <li>
+              <span className="font-bold">College: </span> STI College
+              Global City
+            </li>
+          </ul>
+          <ul className="list-disc">
+            <li>
+              <span className="font-bold">Age: </span> 22
+            </li>
+            <li>
+              <span className="font-bold">Year: </span> 4th Year
+              College
+            </li>
+            <li>
+              <span className="font-bold">Email: </span>{" "}
+              vjastoni13@gmail.com
+            </li>
+            <li>
+              <span className="font-bold">Freelance: </span> Not
+              Available
+            </li>
+          </ul>
+        </div>
+        <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
+          Hard-working Information Technology major student (1.29 GWA)
+          currently attending STI College global City, with 4 months
+          of work experience. Frequently praised as diligent by my
+          peers, I can be relied upon to help your company achieve its
+          goals.
+        </p>
+      </section>
     </div>
   );
 }
