@@ -239,7 +239,7 @@ function App() {
             </div>
             <div>
               <div
-                className="text-[16px] font-poppins leading-[35px] mt-2 
+                className="text-[16px] font-poppins leading-[35px] mt-2 ml-7
               md:flex md:items-start md:justify-start md:w-full md:ml-14 lg:ml-8"
               >
                 <ul className="list-disc">
