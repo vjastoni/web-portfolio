@@ -26,6 +26,14 @@ function App() {
     setIsShownPortfolio(false);
     setIsShownContacts(false);
   }
+  function resume() {
+    setOpen(!open);
+    setIsShownHome(false);
+    setIsShownAbout(false);
+    setIsShownResume(true);
+    setIsShownPortfolio(false);
+    setIsShownContacts(false);
+  }
   return (
     <div className="overflow-x-hidden lg:flex lg:flex-col lg:items-center">
       <div
@@ -59,14 +67,14 @@ function App() {
         >
           <a href="#homepage" onClick={home}>
             <li
-              onMouseEnter={() => setIsShownHome(true)}
-              onMouseLeave={() => setIsShownHome(false)}
+              onMouseEnter={home}
+              onMouseLeave={home}
               className={`${
                 isShownHome
-                  ? "bg-darkCyan text-white"
-                  : "bg-whitesmoke"
+                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
+                  : "bg-whitesmoke lg:bg-whitesmoke"
               } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1 
-            lg:w-[56px] lg: lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
+            lg:w-[56px] lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
             lg:hover:bg-darkCyan`}
             >
               <img
@@ -78,12 +86,12 @@ function App() {
           </a>
           <a href="#aboutpage" onClick={about}>
             <li
-              onMouseEnter={() => setIsShownAbout(true)}
-              onMouseLeave={() => setIsShownAbout(false)}
+              onMouseEnter={about}
+              onMouseLeave={about}
               className={`${
                 isShownAbout
-                  ? "bg-darkCyan text-white"
-                  : "bg-whitesmoke"
+                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
+                  : "bg-whitesmoke lg:bg-whitesmoke"
               } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
             lg:w-[56px] lg: lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
             lg:hover:bg-darkCyan`}
@@ -95,19 +103,25 @@ function App() {
               About
             </li>
           </a>
-          <li
-            onMouseEnter={() => setIsShownResume(true)}
-            onMouseLeave={() => setIsShownResume(false)}
-            className="bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
+          <a href="#resumepage" onClick={resume}>
+            <li
+              onMouseEnter={resume}
+              onMouseLeave={resume}
+              className={`${
+                isShownResume
+                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
+                  : "bg-whitesmoke lg:bg-whitesmoke"
+              }bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
           lg:w-[56px] lg: lg:text-transparent lg:hover:w-[120px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
-          lg:hover:bg-darkCyan"
-          >
-            <img
-              className={`${isShownResume ? "invert" : "invert-0"}`}
-              src={require("./assets/resume.png")}
-            />
-            Resume
-          </li>
+          lg:hover:bg-darkCyan`}
+            >
+              <img
+                className={`${isShownResume ? "invert" : "invert-0"}`}
+                src={require("./assets/resume.png")}
+              />
+              Resume
+            </li>
+          </a>
           <li
             onMouseEnter={() => setIsShownPortfolio(true)}
             onMouseLeave={() => setIsShownPortfolio(false)}
@@ -380,6 +394,12 @@ function App() {
           </div>
         </div>
       </section>
+      {/* Resume Page */}
+      <section
+        id="resumepage"
+        className="w-screen h-full flex flex-col items-center p-8 
+        lg:w-[79%]"
+      ></section>
     </div>
   );
 }
