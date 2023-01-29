@@ -289,7 +289,7 @@ function App() {
             </div>
           </div>
         </div>
-        <h2 className="text-[32px] font-bold font-poppins uppercase mt-2 mb-[10px]">
+        <h2 className="text-[32px] font-bold font-poppins uppercase mt-5 mb-[10px]">
           Skills
         </h2>
         <div className="flex items-center justify-center">
