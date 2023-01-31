@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins"],
+        raleway: ["Raleway"],
       },
     },
   },

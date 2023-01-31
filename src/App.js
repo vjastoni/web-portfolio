@@ -399,7 +399,62 @@ function App() {
         id="resumepage"
         className="w-screen h-full flex flex-col items-center p-8 
         lg:w-[79%]"
-      ></section>
+      >
+        <div>
+          <h2 className="font-poppins text-[26px] mt-2 font-bold">
+            What are my Objectives?
+          </h2>
+          <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
+            I want to gain confidence and greatness using my potential
+            in the field of Front end Web Development and express my
+            innovative creative skills for self and my future company
+            growth. After 2-3 years of experience, I want to pursue my
+            career as a full-stack Web Developer.
+          </p>
+        </div>
+        <div className="w-full">
+          <h3 className="font-poppins text-[26px] text-darkGray mt-2 font-bold">
+            Summary
+          </h3>
+          <div className="w-full flex mt-2 justify-start gap-3">
+            <div className="flex flex-col justify-center items-center">
+              <div className="w-[17px] h-[17px] border-2 border-darkCyan bg-darkCyan rounded-full" />
+              <div className="h-[190px] border-l-2 border-darkCyan" />
+            </div>
+            <div className="flex flex-col gap-2 font-poppins">
+              <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                Jastoni Villanueva
+              </h4>
+              <p className="italic font-[15px]">
+                A 21-year old web developer currently studying at STI
+                College Global City.
+              </p>
+              <ul className="list-disc ml-6 flex flex-col gap-2">
+                <li>North Signal Village, Taguig City</li>
+                <li>09452272264</li>
+                <li>vjastoni13@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <h3 className="font-poppins text-[26px] text-darkGray mt-4 font-bold">
+            Education
+          </h3>
+          <div className="w-full flex mt-2 justify-start gap-3">
+            <div className="flex flex-col justify-center items-center">
+              <div className="w-[17px] h-[17px] border-2 border-darkCyan bg-darkCyan rounded-full" />
+              <div className="h-[190px] border-l-2 border-darkCyan" />
+            </div>
+            <div className="flex flex-col gap-2 font-poppins">
+              <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                STI College Global City
+              </h4>
+              <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                2017 - Present
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
