@@ -398,13 +398,18 @@ function App() {
       <section
         id="resumepage"
         className="w-screen h-full flex flex-col items-center p-8 
-        lg:w-[79%]"
+        lg:w-[79%] lg:mb-20"
       >
         <div>
-          <h2 className="font-poppins text-[26px] mt-2 font-bold">
-            What are my Objectives?
+          <h2 className="text-[32px] text-center font-bold font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
+            RESUME
           </h2>
-          <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
+          <div className="flex items-center justify-center">
+            <hr className="w-9 border border-gray" />
+            <hr className="w-11 border-[2px] border-darkCyan" />
+            <hr className="w-9 border border-gray" />
+          </div>
+          <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2 lg:text-center lg:w-[90%] lg:ml-7">
             I want to gain confidence and greatness using my potential
             in the field of Front end Web Development and express my
             innovative creative skills for self and my future company
@@ -412,44 +417,129 @@ function App() {
             career as a full-stack Web Developer.
           </p>
         </div>
-        <div className="w-full">
-          <h3 className="font-poppins text-[26px] text-darkGray mt-2 font-bold">
-            Summary
-          </h3>
-          <div className="w-full flex mt-2 justify-start gap-3">
-            <div className="flex flex-col justify-center items-center">
-              <div className="w-[17px] h-[17px] border-2 border-darkCyan bg-darkCyan rounded-full" />
-              <div className="h-[190px] border-l-2 border-darkCyan" />
+        <div className="w-full lg:flex lg:flex-row lg:gap-[140px] lg:mt-5">
+          <div className="lg:ml-[70px]">
+            <h3 className="font-poppins text-[26px] text-darkGray mt-2 font-bold">
+              Summary
+            </h3>
+            <div className="w-full flex mt-2 justify-start gap-3">
+              <div className="flex flex-col justify-center items-center">
+                <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
+                <div
+                  className="h-[190px] border-l-2 border-darkCyan 
+              md:h-[140px]"
+                />
+              </div>
+              <div className="flex flex-col gap-2 font-poppins">
+                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                  Jastoni Villanueva
+                </h4>
+                <p className="italic font-[15px]">
+                  A 21-year old web developer currently studying at
+                  STI College Global City.
+                </p>
+                <ul className="list-disc ml-6 flex flex-col gap-2">
+                  <li>North Signal Village, Taguig City</li>
+                  <li>09452272264</li>
+                  <li>vjastoni13@gmail.com</li>
+                </ul>
+              </div>
             </div>
-            <div className="flex flex-col gap-2 font-poppins">
-              <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
-                Jastoni Villanueva
-              </h4>
-              <p className="italic font-[15px]">
-                A 21-year old web developer currently studying at STI
-                College Global City.
-              </p>
-              <ul className="list-disc ml-6 flex flex-col gap-2">
-                <li>North Signal Village, Taguig City</li>
-                <li>09452272264</li>
-                <li>vjastoni13@gmail.com</li>
-              </ul>
+            <h3 className="font-poppins text-[26px] text-darkGray mt-4 font-bold">
+              Education
+            </h3>
+            <div className="w-full flex mt-2 justify-start gap-3">
+              <div className="flex-col">
+                <div className="flex flex-col justify-center items-center">
+                  <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
+                  <div className="h-[225px] border-l-2 border-darkCyan md:h-[130px]" />
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
+                  <div className="h-[205px] border-l-2 border-darkCyan" />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2 font-poppins">
+                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                  STI College Global City
+                </h4>
+                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  2017 - Present
+                </div>
+                <p className="italic font-[15px]">
+                  Bachelor of Science in Information Technology -
+                  Senior Highschool - College
+                </p>
+                <ul className="list-disc ml-6 flex flex-col gap-2">
+                  <li>Graduated with Honors</li>
+                  <li>
+                    HTML, CSS, Javascript, C#, Java, Android App
+                    Development
+                  </li>
+                </ul>
+                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px] mt-1">
+                  Army's Angels Integrated School
+                </h4>
+                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  2013 - 2017
+                </div>
+                <p className="italic font-[15px]">
+                  Elementary - Junior Highschool
+                </p>
+                <ul className="list-disc ml-6 flex flex-col gap-2">
+                  <li>Graduated with Honors</li>
+                  <li>Visual Basic</li>
+                  <li>Basic HTML, CSS</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <h3 className="font-poppins text-[26px] text-darkGray mt-4 font-bold">
-            Education
-          </h3>
-          <div className="w-full flex mt-2 justify-start gap-3">
-            <div className="flex flex-col justify-center items-center">
-              <div className="w-[17px] h-[17px] border-2 border-darkCyan bg-darkCyan rounded-full" />
-              <div className="h-[190px] border-l-2 border-darkCyan" />
-            </div>
-            <div className="flex flex-col gap-2 font-poppins">
-              <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
-                STI College Global City
-              </h4>
-              <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
-                2017 - Present
+          <div>
+            <h3 className="font-poppins text-[26px] text-darkGray mt-2 font-bold">
+              Awards and Certificates
+            </h3>
+            <div className="w-full flex mt-2 justify-start gap-3">
+              <div className="flex flex-col justify-start items-center">
+                <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
+                <div className="h-[148px] border-l-2 border-darkCyan" />
+                <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
+                <div className="h-[84px] border-l-2 border-darkCyan" />
+                <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
+                <div className="h-[140px] border-l-2 border-darkCyan" />
+              </div>
+              <div className="flex flex-col gap-2 font-poppins">
+                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                  4th Year College
+                </h4>
+                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  2021 - 2022
+                </div>
+                <ul className="list-disc ml-6 flex flex-col gap-2">
+                  <li>CodeFest Champion</li>
+                  <li>11th IT Skills Olympics</li>
+                  <li> SAP Business One</li>
+                </ul>
+                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                  1st Year College
+                </h4>
+                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  2019
+                </div>
+                <ul className="list-disc ml-6 flex flex-col gap-2">
+                  <li>CodeFest Champion</li>
+                </ul>
+                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
+                  Senior Highschool
+                </h4>
+                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  2019
+                </div>
+                <ul className="list-disc ml-6 flex flex-col gap-2">
+                  <li>CodeFest Local Level</li>
+                  <li>CodeFest Cluster Level</li>
+                  <li> Graduated with Honors</li>
+                </ul>
               </div>
             </div>
           </div>
