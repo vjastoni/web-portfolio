@@ -14,7 +14,9 @@ function App() {
   const [isHoverCalc, setIsHoverCalc] = useState(false);
   const [isHoverDg, setIsHoverDg] = useState(false);
   const [isHoverBsq, setIsHoverBsq] = useState(false);
-  const [modalCalc, setModalCalc] = useState(false);
+  const [isHoverLocation, setIsHoverLocation] = useState(false);
+  const [isHoverEmail, setIsHoverEmail] = useState(false);
+  const [isHoverCall, setIsHoverCall] = useState(false);
 
   function home() {
     setOpen(!open);
@@ -595,33 +597,26 @@ function App() {
           <hr className="w-11 border-[2px] border-darkCyan" />
           <hr className="w-9 border border-gray" />
         </div>
-        <div className="w-full mt-5 ">
+        <div className="w-full mt-5 lg:mb-20">
           <h3 className="font-poppins text-[26px] font-bold text-center">
             Accomplished Projects
           </h3>
           <div
             className="w-full flex flex-col items-center gap-5 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center
-          md:gap-5 lg:mt-5"
+          md:gap-5 lg:mt-5 lg:gap-16"
           >
             {/* BASIC CALCULATOR */}
             <div
-              onClick={() => setModalCalc(true)}
-              onMouseEnter={() => setIsHoverCalc(true)}
-              onMouseLeave={() => setIsHoverCalc(false)}
               className="w-64 h-[380px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[290px] lg:h-[360px]"
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[290px] lg:h-[360px] lg:hover:scale-110"
             >
               <img
-                className={`${
-                  isHoverCalc
-                    ? "visible duration-300"
-                    : "hidden duration-300"
-                } w-10 h-10 invert`}
+                className={` visible duration-300 w-10 h-10 invert `}
                 src={require("./assets/clickhere.png")}
               />
               <img
                 className="w-64 h-[380px] -z-20 border absolute border-gray-100 rounded-md shadow-md
-                lg:w-[290px] lg:h-[360px]"
+                lg:w-[290px] lg:h-[360px] hover:scale-110"
                 src={require("./assets/BasicCalculator.png")}
               />
             </div>
@@ -631,19 +626,19 @@ function App() {
               onMouseEnter={() => setIsHoverBsq(true)}
               onMouseLeave={() => setIsHoverBsq(false)}
               className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[258px]"
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[258px] hover:scale-110"
             >
               <img
                 className={`${
                   isHoverBsq
                     ? "visible duration-300"
                     : "hidden duration-300"
-                } w-10 h-10 invert`}
+                } w-10 h-10 invert `}
                 src={require("./assets/clickhere.png")}
               />
               <img
                 className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md
-                lg:w-[356px] lg:h-[258px]"
+                lg:w-[356px] lg:h-[258px] hover:scale-110"
                 src={require("./assets/Digiserve.png")}
               />
             </div>
@@ -652,18 +647,18 @@ function App() {
               onMouseEnter={() => setIsHoverDg(true)}
               onMouseLeave={() => setIsHoverDg(false)}
               className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[200px]"
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[200px] hover:scale-110"
             >
               <img
                 className={`${
                   isHoverDg
                     ? "visible duration-300"
                     : "hidden duration-300"
-                } w-10 h-10 invert`}
+                } w-10 h-10 invert `}
                 src={require("./assets/clickhere.png")}
               />
               <img
-                className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px] hover:scale-110"
                 src={require("./assets/bsq.png")}
               />
             </div>
@@ -671,18 +666,18 @@ function App() {
               onMouseEnter={() => setIsHoverDiaeta(true)}
               onMouseLeave={() => setIsHoverDiaeta(false)}
               className="w-64 h-[420px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[529px]"
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[529px] hover:scale-110"
             >
               <img
                 className={`${
                   isHoverDiaeta
                     ? "visible duration-300"
                     : "hidden duration-300"
-                } w-10 h-10 invert`}
+                } w-10 h-10 invert `}
                 src={require("./assets/clickhere.png")}
               />
               <img
-                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[529px]"
+                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[529px] hover:scale-110"
                 src={require("./assets/Diaeta.png")}
               />
             </div>
@@ -691,18 +686,18 @@ function App() {
               onMouseEnter={() => setIsHoverRMS(true)}
               onMouseLeave={() => setIsHoverRMS(false)}
               className="w-64 h-[420px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[532px]"
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[532px] hover:scale-110"
             >
               <img
                 className={`${
                   isHoverRMS
                     ? "visible duration-300"
                     : "hidden duration-300"
-                } w-10 h-10 invert`}
+                } w-10 h-10 invert `}
                 src={require("./assets/clickhere.png")}
               />
               <img
-                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[532px]"
+                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[532px] hover:scale-110"
                 src={require("./assets/RMS.png")}
               />
             </div>
@@ -714,7 +709,130 @@ function App() {
         id="contactspage"
         className="w-screen h-full flex flex-col items-center p-8 
         lg:w-[79%] lg:mb-20"
-      ></section>
+      >
+        <div className="w-full">
+          <h2 className="text-[32px] font-bold text-center font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
+            Contact
+          </h2>
+          <div className="flex items-center justify-center">
+            <hr className="w-9 border border-gray" />
+            <hr className="w-11 border-[2px] border-darkCyan" />
+            <hr className="w-9 border border-gray" />
+          </div>
+          <div className="w-full lg:flex lg:flex-row lg:gap-5 lg:items-center lg:justify-center">
+            <div className="mt-10 w-full flex flex-col items-start gap-10 lg:w-[600px]">
+              {/* Location */}
+              <div className="w-full flex gap-4 items-center">
+                <div
+                  onMouseEnter={() => setIsHoverLocation(true)}
+                  onMouseLeave={() => setIsHoverLocation(false)}
+                  className="w-[44px] h-[44px] bg-[#eef7ff] rounded-full flex items-center justify-center hover:cursor-pointer
+              hover:bg-darkCyan duration-300"
+                >
+                  <img
+                    className={`${
+                      isHoverLocation ? "invert" : "invert-0"
+                    } w-7 h-7`}
+                    src={require("./assets/location.png")}
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h2 className="font-raleway text-[22px] font-bold">
+                    Location:
+                  </h2>
+                  <p className="font-poppins text-[#728394] text-[14px]">
+                    North Signal Village Taguig City
+                  </p>
+                </div>
+              </div>
+              {/* Email */}
+              <div className="w-full flex gap-4 items-center">
+                <div
+                  onMouseEnter={() => setIsHoverEmail(true)}
+                  onMouseLeave={() => setIsHoverEmail(false)}
+                  className="w-[44px] h-[44px] bg-[#eef7ff] rounded-full flex items-center justify-center hover:cursor-pointer
+              hover:bg-darkCyan duration-300"
+                >
+                  <img
+                    className={`${
+                      isHoverEmail ? "invert" : "invert-0"
+                    } w-7 h-7`}
+                    src={require("./assets/contacts.png")}
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h2 className="font-raleway text-[22px] font-bold">
+                    Email:
+                  </h2>
+                  <p className="font-poppins text-[#728394] text-[14px]">
+                    vjastoni13@gmail.com
+                  </p>
+                </div>
+              </div>
+              {/* Call */}
+              <div className="w-full flex gap-4 items-center">
+                <div
+                  onMouseEnter={() => setIsHoverCall(true)}
+                  onMouseLeave={() => setIsHoverCall(false)}
+                  className="w-[44px] h-[44px] bg-[#eef7ff] flex items-center justify-center rounded-full hover:cursor-pointer
+                hover:bg-darkCyan duration-300"
+                >
+                  <img
+                    className={`${
+                      isHoverCall ? "invert" : "invert-0"
+                    } w-7 h-7`}
+                    src={require("./assets/call.png")}
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <h2 className="font-raleway text-[22px] font-bold">
+                    Call:
+                  </h2>
+                  <p className="font-poppins text-[#728394] text-[14px]">
+                    09452272264
+                  </p>
+                </div>
+              </div>
+              <div className="w-full">
+                <iframe
+                  className="w-full h-[300px] rounded-md lg:w-[350px]"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7724.834571564102!2d121.057447!3d14.5181077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8b56bb4dd9b%3A0x4fdd8e78b96ac86d!2sNorth%20Signal%20Village%2C%20Taguig%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1675343420308!5m2!1sen!2sph"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <div className="w-full flex flex-col gap-5 justify-center items-center mt-10 lg:w-[550px] ">
+              <div className="flex flex-col gap-5 lg:flex lg:flex-row lg:w-[550px]">
+                <input
+                  placeholder="Your Name"
+                  className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2"
+                  type="text"
+                />
+                <input
+                  placeholder="Your Email"
+                  className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2"
+                  type="text"
+                />
+              </div>
+              <input
+                placeholder="Subject"
+                className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2 lg:w-full"
+                type="text"
+              />
+              <textarea
+                placeholder="Message"
+                className="w-full md:w-[350px] border border-gray-500 rounded-sm pl-2 pt-2 lg:w-full"
+              />
+              <input
+                value="Send Message"
+                type="button"
+                className="w-[125px] h-[45px] rounded-md bg-darkCyan text-white"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
