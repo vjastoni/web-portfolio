@@ -9,6 +9,12 @@ function App() {
   const [isShownResume, setIsShownResume] = useState(false);
   const [isShownPortfolio, setIsShownPortfolio] = useState(false);
   const [isShownContacts, setIsShownContacts] = useState(false);
+  const [isHoverDiaeta, setIsHoverDiaeta] = useState(false);
+  const [isHoverRMS, setIsHoverRMS] = useState(false);
+  const [isHoverCalc, setIsHoverCalc] = useState(false);
+  const [isHoverDg, setIsHoverDg] = useState(false);
+  const [isHoverBsq, setIsHoverBsq] = useState(false);
+  const [modalCalc, setModalCalc] = useState(false);
 
   function home() {
     setOpen(!open);
@@ -33,6 +39,22 @@ function App() {
     setIsShownResume(true);
     setIsShownPortfolio(false);
     setIsShownContacts(false);
+  }
+  function portfolio() {
+    setOpen(!open);
+    setIsShownHome(false);
+    setIsShownAbout(false);
+    setIsShownResume(false);
+    setIsShownPortfolio(true);
+    setIsShownContacts(false);
+  }
+  function contacts() {
+    setOpen(!open);
+    setIsShownHome(false);
+    setIsShownAbout(false);
+    setIsShownResume(false);
+    setIsShownPortfolio(false);
+    setIsShownContacts(true);
   }
   return (
     <div className="overflow-x-hidden lg:flex lg:flex-col lg:items-center">
@@ -122,34 +144,48 @@ function App() {
               Resume
             </li>
           </a>
-          <li
-            onMouseEnter={() => setIsShownPortfolio(true)}
-            onMouseLeave={() => setIsShownPortfolio(false)}
-            className="bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
-          lg:w-[56px] lg: lg:text-transparent lg:hover:w-[121px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
-          lg:hover:bg-darkCyan"
-          >
-            <img
+          <a href="#portfoliopage" onClick={portfolio}>
+            <li
+              onMouseEnter={portfolio}
+              onMouseLeave={portfolio}
               className={`${
-                isShownPortfolio ? "invert" : "invert-0"
-              }`}
-              src={require("./assets/portfolio.png")}
-            />
-            Portfolio
-          </li>
-          <li
-            onMouseEnter={() => setIsShownContacts(true)}
-            onMouseLeave={() => setIsShownContacts(false)}
-            className="bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
-          lg:w-[56px] lg: lg:text-transparent lg:hover:w-[122px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
-          lg:hover:bg-darkCyan"
-          >
-            <img
-              className={`${isShownContacts ? "invert" : "invert-0"}`}
-              src={require("./assets/contacts.png")}
-            />
-            Contacts
-          </li>
+                isShownPortfolio
+                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
+                  : "bg-whitesmoke lg:bg-whitesmoke"
+              }bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
+          lg:w-[56px] lg: lg:text-transparent lg:hover:w-[120px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
+          lg:hover:bg-darkCyan`}
+            >
+              <img
+                className={`${
+                  isShownPortfolio ? "invert" : "invert-0"
+                }`}
+                src={require("./assets/portfolio.png")}
+              />
+              Portfolio
+            </li>
+          </a>
+          <a href="#contactspage" onClick={contacts}>
+            <li
+              onMouseEnter={contacts}
+              onMouseLeave={contacts}
+              className={`${
+                isShownContacts
+                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
+                  : "bg-whitesmoke lg:bg-whitesmoke"
+              }bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
+        lg:w-[56px] lg: lg:text-transparent lg:hover:w-[120px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
+        lg:hover:bg-darkCyan`}
+            >
+              <img
+                className={`${
+                  isShownContacts ? "invert" : "invert-0"
+                }`}
+                src={require("./assets/contacts.png")}
+              />
+              Contacts
+            </li>
+          </a>
         </ul>
       </div>
       {/*Home Page*/}
@@ -418,7 +454,7 @@ function App() {
           </p>
         </div>
         <div className="w-full lg:flex lg:flex-row lg:gap-[140px] lg:mt-5">
-          <div className="lg:ml-[70px]">
+          <div className="lg:ml-[60px]">
             <h3 className="font-poppins text-[26px] text-darkGray mt-2 font-bold">
               Summary
             </h3>
@@ -435,7 +471,7 @@ function App() {
                   Jastoni Villanueva
                 </h4>
                 <p className="italic font-[15px]">
-                  A 21-year old web developer currently studying at
+                  A 22-year old web developer currently studying at
                   STI College Global City.
                 </p>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
@@ -452,11 +488,11 @@ function App() {
               <div className="flex-col">
                 <div className="flex flex-col justify-center items-center">
                   <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
-                  <div className="h-[225px] border-l-2 border-darkCyan md:h-[130px]" />
+                  <div className="h-[225px] border-l-2 border-darkCyan md:h-[153px]" />
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
-                  <div className="h-[205px] border-l-2 border-darkCyan" />
+                  <div className="h-[205px] lg:h-[180px] border-l-2 border-darkCyan" />
                 </div>
               </div>
 
@@ -545,6 +581,140 @@ function App() {
           </div>
         </div>
       </section>
+      {/* Portfolio Page */}
+      <section
+        id="portfoliopage"
+        className="w-screen h-full flex flex-col items-center p-8
+        lg:w-[79%] lg:mb-20"
+      >
+        <h2 className="text-[32px] text-center font-bold font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
+          Portfolio
+        </h2>
+        <div className="flex items-center justify-center">
+          <hr className="w-9 border border-gray" />
+          <hr className="w-11 border-[2px] border-darkCyan" />
+          <hr className="w-9 border border-gray" />
+        </div>
+        <div className="w-full mt-5 ">
+          <h3 className="font-poppins text-[26px] font-bold text-center">
+            Accomplished Projects
+          </h3>
+          <div
+            className="w-full flex flex-col items-center gap-5 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center
+          md:gap-5 lg:mt-5"
+          >
+            {/* BASIC CALCULATOR */}
+            <div
+              onClick={() => setModalCalc(true)}
+              onMouseEnter={() => setIsHoverCalc(true)}
+              onMouseLeave={() => setIsHoverCalc(false)}
+              className="w-64 h-[380px] mt-2 flex flex-col items-center justify-center rounded-md 
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[290px] lg:h-[360px]"
+            >
+              <img
+                className={`${
+                  isHoverCalc
+                    ? "visible duration-300"
+                    : "hidden duration-300"
+                } w-10 h-10 invert`}
+                src={require("./assets/clickhere.png")}
+              />
+              <img
+                className="w-64 h-[380px] -z-20 border absolute border-gray-100 rounded-md shadow-md
+                lg:w-[290px] lg:h-[360px]"
+                src={require("./assets/BasicCalculator.png")}
+              />
+            </div>
+
+            {/* DIGISERVE */}
+            <div
+              onMouseEnter={() => setIsHoverBsq(true)}
+              onMouseLeave={() => setIsHoverBsq(false)}
+              className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md 
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[258px]"
+            >
+              <img
+                className={`${
+                  isHoverBsq
+                    ? "visible duration-300"
+                    : "hidden duration-300"
+                } w-10 h-10 invert`}
+                src={require("./assets/clickhere.png")}
+              />
+              <img
+                className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md
+                lg:w-[356px] lg:h-[258px]"
+                src={require("./assets/Digiserve.png")}
+              />
+            </div>
+
+            <div
+              onMouseEnter={() => setIsHoverDg(true)}
+              onMouseLeave={() => setIsHoverDg(false)}
+              className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md 
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[200px]"
+            >
+              <img
+                className={`${
+                  isHoverDg
+                    ? "visible duration-300"
+                    : "hidden duration-300"
+                } w-10 h-10 invert`}
+                src={require("./assets/clickhere.png")}
+              />
+              <img
+                className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                src={require("./assets/bsq.png")}
+              />
+            </div>
+            <div
+              onMouseEnter={() => setIsHoverDiaeta(true)}
+              onMouseLeave={() => setIsHoverDiaeta(false)}
+              className="w-64 h-[420px] mt-2 flex flex-col items-center justify-center rounded-md 
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[529px]"
+            >
+              <img
+                className={`${
+                  isHoverDiaeta
+                    ? "visible duration-300"
+                    : "hidden duration-300"
+                } w-10 h-10 invert`}
+                src={require("./assets/clickhere.png")}
+              />
+              <img
+                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[529px]"
+                src={require("./assets/Diaeta.png")}
+              />
+            </div>
+
+            <div
+              onMouseEnter={() => setIsHoverRMS(true)}
+              onMouseLeave={() => setIsHoverRMS(false)}
+              className="w-64 h-[420px] mt-2 flex flex-col items-center justify-center rounded-md 
+            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[532px]"
+            >
+              <img
+                className={`${
+                  isHoverRMS
+                    ? "visible duration-300"
+                    : "hidden duration-300"
+                } w-10 h-10 invert`}
+                src={require("./assets/clickhere.png")}
+              />
+              <img
+                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[532px]"
+                src={require("./assets/RMS.png")}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Contacts Page */}
+      <section
+        id="contactspage"
+        className="w-screen h-full flex flex-col items-center p-8 
+        lg:w-[79%] lg:mb-20"
+      ></section>
     </div>
   );
 }
