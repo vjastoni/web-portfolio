@@ -197,7 +197,7 @@ function App() {
       md:flex md:h-screen md:flex-col md:justify-center md:items-center md:gap-5
       lg:flex lg:flex-row lg:gap-[50px] lg:items-center lg:justify-center xl:gap-[130px]"
       >
-        <div className="md:flex md:flex-col md:gap-5">
+        <div className="md:flex md:flex-col md:gap-5 lg:animate-[moveRight_0.8s_ease-in-out] ">
           <h1 className="font-semibold text-[44px] font-poppins leading-[66px] text-darkGray mt-5 lg:text-[55px] lg:leading-[70px]">
             CRAFTING THE BEST
             <br />
@@ -216,7 +216,7 @@ function App() {
             </div>
           </a>
         </div>
-        <div className="md:flex md:flex-col md:gap-5">
+        <div className="md:flex md:flex-col md:gap-5 lg:animate-[moveLeft_0.8s_ease-in-out]">
           <img
             className="mt-5 md:h-[500px] md:w-[500px] lg:h-[390px] lg:w-[390px]"
             src={require("./assets/header-image.jpg")}
@@ -254,7 +254,7 @@ function App() {
       <section
         id="aboutpage"
         className="w-screen h-full flex flex-col items-center p-8 
-        lg:w-[79%]"
+        lg:w-[79%] lg:animate-[moveTop_0.8s_ease-in-out]"
       >
         <h2 className="text-[32px] font-bold font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
           ABOUT
@@ -438,7 +438,7 @@ function App() {
       <section
         id="resumepage"
         className="w-screen h-full flex flex-col items-center p-8 
-        lg:w-[79%] lg:mb-20"
+        lg:w-[79%] lg:mb-20 lg:animate-[moveTop_0.8s_ease-in-out]"
       >
         <div>
           <h2 className="text-[32px] text-center font-bold font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
@@ -589,7 +589,7 @@ function App() {
       <section
         id="portfoliopage"
         className="w-screen h-full flex flex-col items-center p-8
-        lg:w-[79%] lg:mb-20"
+        lg:w-[79%] lg:mb-20 lg:animate-[moveTop_0.8s_ease-in-out]"
       >
         <h2 className="text-[32px] text-center font-bold font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
           Portfolio
@@ -721,7 +721,7 @@ function App() {
             <hr className="w-11 border-[2px] border-darkCyan" />
             <hr className="w-9 border border-gray" />
           </div>
-          <div className="w-full lg:flex lg:flex-row lg:gap-5 lg:items-center lg:justify-center">
+          <div className="w-full lg:flex lg:flex-row lg:gap-5 lg:items-center lg:justify-center lg:animate-[moveRight_0.8s_ease-in-out]">
             <div className="mt-10 w-full flex flex-col items-start gap-10 lg:w-[600px]">
               {/* Location */}
               <div className="w-full flex gap-4 items-center">
@@ -804,7 +804,7 @@ function App() {
                 ></iframe>
               </div>
             </div>
-            <div className="w-full flex flex-col gap-5 justify-center items-center mt-10 lg:w-[550px] ">
+            <div className="w-full flex flex-col gap-5 justify-center items-center mt-10 lg:w-[550px] lg:animate-[moveLeft_0.8s_ease-in-out]">
               <div className="flex flex-col gap-5 lg:flex lg:flex-row lg:w-[550px]">
                 <input
                   placeholder="Your Name"
@@ -835,8 +835,8 @@ function App() {
           </div>
         </div>
       </section>
-      <footer className="w-full">
-        <div className="w-full flex flex-col items-center bg-[#f7f8f9] justify-center p-10">
+      <footer className="w-full ">
+        <div className="w-full flex flex-col items-center bg-[#f7f8f9] justify-center p-10 lg:animate-[moveTop_0.8s_ease-in-out]">
           <h1 className=" font-extrabold text-[36px] text-darkGray">
             Jastoni Villanueva
           </h1>
