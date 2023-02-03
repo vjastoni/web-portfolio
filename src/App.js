@@ -207,12 +207,14 @@ function App() {
             Meet Jastoni Villanueva. A 22-year old web developer in
             <br /> STI College Global City
           </p>
-          <div
-            className="w-24 mt-2 border border-darkGray flex items-center justify-center rounded-md hover:bg-darkGray hover:cursor-pointer
+          <a href="./resume/resume.pdf" download="Curriculum Vitae">
+            <div
+              className="w-24 mt-2 border border-darkGray flex items-center justify-center rounded-md hover:bg-darkGray hover:cursor-pointer
           hover:text-white duration-300"
-          >
-            <h1 className="p-2">Check CV</h1>
-          </div>
+            >
+              <h1 className="p-2">Check CV</h1>
+            </div>
+          </a>
         </div>
         <div className="md:flex md:flex-col md:gap-5">
           <img
@@ -710,7 +712,7 @@ function App() {
         className="w-screen h-full flex flex-col items-center p-8 
         lg:w-[79%] lg:mb-20"
       >
-        <div className="w-full">
+        <div className="w-full mb-10">
           <h2 className="text-[32px] font-bold text-center font-poppins uppercase mt-2 mb-[10px] lg:mt-0">
             Contact
           </h2>
@@ -822,7 +824,7 @@ function App() {
               />
               <textarea
                 placeholder="Message"
-                className="w-full md:w-[350px] border border-gray-500 rounded-sm pl-2 pt-2 lg:w-full"
+                className="w-full h-48 md:w-[350px] border border-gray-500 rounded-sm pl-2 pt-2 lg:w-full"
               />
               <input
                 value="Send Message"
@@ -833,6 +835,47 @@ function App() {
           </div>
         </div>
       </section>
+      <footer className="w-full">
+        <div className="w-full flex flex-col items-center bg-[#f7f8f9] justify-center p-10">
+          <h1 className=" font-extrabold text-[36px] text-darkGray">
+            Jastoni Villanueva
+          </h1>
+          <p className="font-raleway text-darkGray text-[14px] mt-5 italic">
+            Contact me @
+          </p>
+          <div className="w-full flex items-center justify-center gap-2 mt-5">
+            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+              <IonIcon color="primary" name="logo-twitter"></IonIcon>
+            </div>
+            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+              <IonIcon color="primary" name="logo-facebook"></IonIcon>
+            </div>
+            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+              <IonIcon
+                color="primary"
+                name="logo-instagram"
+              ></IonIcon>
+            </div>
+            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+              <IonIcon color="primary" name="logo-linkedin"></IonIcon>
+            </div>
+            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+              <IonIcon color="primary" name="logo-google"></IonIcon>
+            </div>
+          </div>
+          <div className="text-center flex flex-col mt-10 items-center">
+            <p className="text-[14px]">
+              ©Web Portfolio. All Rights Reserved
+            </p>
+            <p className="text-[13px]">
+              Developed by{" "}
+              <span className="text-darkCyan">
+                Jastoni Villanueva
+              </span>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
