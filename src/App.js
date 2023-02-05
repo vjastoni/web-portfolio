@@ -1,4 +1,5 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./App.css";
 import { IonIcon } from "react-ion-icon";
 
@@ -17,6 +18,10 @@ function App() {
   const [isHoverLocation, setIsHoverLocation] = useState(false);
   const [isHoverEmail, setIsHoverEmail] = useState(false);
   const [isHoverCall, setIsHoverCall] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
 
   function home() {
     setOpen(!open);
@@ -58,6 +63,34 @@ function App() {
     setIsShownPortfolio(false);
     setIsShownContacts(true);
   }
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_vv8m11o",
+        "template_3ckl7o7",
+        form.current,
+        "t5xsrbyqMnilHRXPO"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setEmail("");
+          setFirstName("");
+          setMessage("");
+          setSubject("");
+          alert("Message Sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div className="overflow-x-hidden lg:flex lg:flex-col lg:items-center">
       <div
@@ -805,32 +838,50 @@ function App() {
               </div>
             </div>
             <div className="w-full flex flex-col gap-5 justify-center items-center mt-10 lg:w-[550px] lg:animate-[moveLeft_0.8s_ease-in-out]">
-              <div className="flex flex-col gap-5 lg:flex lg:flex-row lg:w-[550px]">
+              <form ref={form} onSubmit={sendEmail}>
+                <div className="flex flex-col gap-5 mb-5 lg:flex lg:flex-row lg:w-[550px]">
+                  <input
+                    required
+                    name="name"
+                    placeholder="Your Name"
+                    className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2"
+                    type="text"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                  <input
+                    required
+                    name="email"
+                    placeholder="Your Email"
+                    className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2"
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
                 <input
-                  placeholder="Your Name"
-                  className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2"
+                  required
+                  name="subject"
+                  placeholder="Subject"
+                  className="h-[44px] w-[350px] border mb-5 border-gray-500 rounded-sm pl-2 lg:w-full"
                   type="text"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
+                <textarea
+                  required
+                  name="message"
+                  placeholder="Message"
+                  className="w-full h-48 md:w-[350px] border mb-5 border-gray-500 rounded-sm pl-2 pt-2 lg:w-full"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
                 <input
-                  placeholder="Your Email"
-                  className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2"
-                  type="text"
+                  value="Send Message"
+                  type="submit"
+                  className="w-full h-[45px] rounded-md bg-darkCyan text-white"
                 />
-              </div>
-              <input
-                placeholder="Subject"
-                className="h-[44px] w-[350px] border border-gray-500 rounded-sm pl-2 lg:w-full"
-                type="text"
-              />
-              <textarea
-                placeholder="Message"
-                className="w-full h-48 md:w-[350px] border border-gray-500 rounded-sm pl-2 pt-2 lg:w-full"
-              />
-              <input
-                value="Send Message"
-                type="button"
-                className="w-[125px] h-[45px] rounded-md bg-darkCyan text-white"
-              />
+              </form>
             </div>
           </div>
         </div>
