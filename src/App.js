@@ -240,7 +240,10 @@ function App() {
             Meet Jastoni Villanueva. A 22-year old web developer in
             <br /> STI College Global City
           </p>
-          <a href="./resume/resume.pdf" download="Curriculum Vitae">
+          <a
+            href="https://drive.google.com/file/d/1_LG786q-s-hVrL7ClizOAgcAdrmAw4PB/view?usp=sharing"
+            target="_blank"
+          >
             <div
               className="w-24 mt-2 border border-darkGray flex items-center justify-center rounded-md hover:bg-darkGray hover:cursor-pointer
           hover:text-white duration-300"
@@ -255,31 +258,43 @@ function App() {
             src={require("./assets/header-image.jpg")}
           />
           <div className="flex items-center gap-1 justify-evenly mt-5 md:flex md:gap-1">
-            <IonIcon
-              size="large"
-              color="dark"
-              name="logo-twitter"
-            ></IonIcon>
-            <IonIcon
-              size="large"
-              color="dark"
-              name="logo-facebook"
-            ></IonIcon>
-            <IonIcon
-              size="large"
-              color="dark"
-              name="logo-instagram"
-            ></IonIcon>
-            <IonIcon
-              size="large"
-              color="dark"
-              name="logo-linkedin"
-            ></IonIcon>
-            <IonIcon
-              size="large"
-              color="dark"
-              name="logo-google"
-            ></IonIcon>
+            <a href="https://twitter.com/vjast_" target="_blank">
+              <IonIcon
+                size="large"
+                color="dark"
+                name="logo-twitter"
+              ></IonIcon>
+            </a>
+            <a
+              href="https://www.facebook.com/tjhayzz"
+              target="_blank"
+            >
+              <IonIcon
+                size="large"
+                color="dark"
+                name="logo-facebook"
+              ></IonIcon>
+            </a>
+            <a
+              href="https://www.instagram.com/vjast_/"
+              target="_blank"
+            >
+              <IonIcon
+                size="large"
+                color="dark"
+                name="logo-instagram"
+              ></IonIcon>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jastoni-villanueva-8a257b234/"
+              target="_blank"
+            >
+              <IonIcon
+                size="large"
+                color="dark"
+                name="logo-linkedin"
+              ></IonIcon>
+            </a>
           </div>
         </div>
       </section>
@@ -551,6 +566,7 @@ function App() {
                     Development
                   </li>
                 </ul>
+
                 <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px] mt-1">
                   Army's Angels Integrated School
                 </h4>
@@ -613,6 +629,14 @@ function App() {
                   <li>CodeFest Cluster Level</li>
                   <li> Graduated with Honors</li>
                 </ul>
+                <a
+                  href="https://drive.google.com/file/d/1cGnLxMTYS8nxDrqsS75Xk-Ocut_CsTV2/view?usp=sharing"
+                  target="_blank"
+                >
+                  <p className="mt-2 text-darkCyan underline">
+                    Click to see my Certificates
+                  </p>
+                </a>
               </div>
             </div>
           </div>
@@ -895,24 +919,47 @@ function App() {
             Contact me @
           </p>
           <div className="w-full flex items-center justify-center gap-2 mt-5">
-            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-              <IonIcon color="primary" name="logo-twitter"></IonIcon>
-            </div>
-            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-              <IonIcon color="primary" name="logo-facebook"></IonIcon>
-            </div>
-            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-              <IonIcon
-                color="primary"
-                name="logo-instagram"
-              ></IonIcon>
-            </div>
-            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-              <IonIcon color="primary" name="logo-linkedin"></IonIcon>
-            </div>
-            <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-              <IonIcon color="primary" name="logo-google"></IonIcon>
-            </div>
+            <a href="https://twitter.com/vjast_" target="_blank">
+              <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+                <IonIcon
+                  color="primary"
+                  name="logo-twitter"
+                ></IonIcon>
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/tjhayzz"
+              target="_blank"
+            >
+              <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+                <IonIcon
+                  color="primary"
+                  name="logo-facebook"
+                ></IonIcon>
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/vjast_/"
+              target="_blank"
+            >
+              <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+                <IonIcon
+                  color="primary"
+                  name="logo-instagram"
+                ></IonIcon>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jastoni-villanueva-8a257b234/"
+              target="_blank"
+            >
+              <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
+                <IonIcon
+                  color="primary"
+                  name="logo-linkedin"
+                ></IonIcon>
+              </div>
+            </a>
           </div>
           <div className="text-center flex flex-col mt-10 items-center">
             <p className="text-[14px]">
