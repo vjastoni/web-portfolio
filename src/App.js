@@ -1,7 +1,7 @@
-import React, { useReducer, useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import "./App.css";
-import { IonIcon } from "react-ion-icon";
+import React, { useReducer, useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import './App.css';
+import { IonIcon } from 'react-ion-icon';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -18,10 +18,10 @@ function App() {
   const [isHoverLocation, setIsHoverLocation] = useState(false);
   const [isHoverEmail, setIsHoverEmail] = useState(false);
   const [isHoverCall, setIsHoverCall] = useState(false);
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [subject, setSubject] = useState('');
 
   function home() {
     setOpen(!open);
@@ -71,19 +71,19 @@ function App() {
 
     emailjs
       .sendForm(
-        "service_vv8m11o",
-        "template_3ckl7o7",
+        'service_vv8m11o',
+        'template_3ckl7o7',
         form.current,
-        "t5xsrbyqMnilHRXPO"
+        't5xsrbyqMnilHRXPO'
       )
       .then(
         (result) => {
           console.log(result.text);
-          setEmail("");
-          setFirstName("");
-          setMessage("");
-          setSubject("");
-          alert("Message Sent!");
+          setEmail('');
+          setFirstName('');
+          setMessage('');
+          setSubject('');
+          alert('Message Sent!');
         },
         (error) => {
           console.log(error.text);
@@ -94,13 +94,12 @@ function App() {
   return (
     <div className="overflow-x-hidden lg:flex lg:flex-col lg:items-center">
       <div
-        className={`${
-          open ? "bg-darkCyan" : "bg-transparent"
-        } w-10 h-10 duration-300 rounded-full fixed flex items-center justify-center right-3 top-3 
+        className={`${open ? 'bg-darkCyan' : 'bg-transparent'} 
+          w-10 h-10 duration-300 rounded-full fixed flex items-center justify-center right-3 top-3 
         lg:invisible`}
       >
         <IonIcon
-          color={`${open ? "primary" : "secondary"}`}
+          color={`${open ? 'primary' : 'secondary'}`}
           onClick={() =>
             setOpen(
               !open,
@@ -109,12 +108,12 @@ function App() {
               setIsShownResume(isShownResume)
             )
           }
-          name={open ? "close" : "menu"}
+          name={open ? 'close' : 'menu'}
         ></IonIcon>
       </div>
       <div
         className={`${
-          open ? "left-[0px] w-[300px]" : "left-[-300px]"
+          open ? 'left-[0px] w-[300px]' : 'left-[-300px]'
         } duration-500 h-screen border bg-white z-50 border-gray-100 fixed 
        lg:w-[100px] lg:left-0 lg:border-none lg:bg-transparent`}
       >
@@ -128,15 +127,15 @@ function App() {
               onMouseLeave={home}
               className={`${
                 isShownHome
-                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
-                  : "bg-whitesmoke lg:bg-whitesmoke"
+                  ? 'bg-darkCyan lg:bg-darkCyan text-white lg:text-white'
+                  : 'bg-whitesmoke lg:bg-whitesmoke'
               } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1 
             lg:w-[56px] lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
             lg:hover:bg-darkCyan`}
             >
               <img
-                className={`${isShownHome ? "invert" : "invert-0"}`}
-                src={require("./assets/home.png")}
+                className={`${isShownHome ? 'invert' : 'invert-0'}`}
+                src={require('./assets/home.png')}
               />
               Home
             </li>
@@ -147,15 +146,15 @@ function App() {
               onMouseLeave={about}
               className={`${
                 isShownAbout
-                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
-                  : "bg-whitesmoke lg:bg-whitesmoke"
+                  ? 'bg-darkCyan lg:bg-darkCyan text-white lg:text-white'
+                  : 'bg-whitesmoke lg:bg-whitesmoke'
               } w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
             lg:w-[56px] lg: lg:text-transparent lg:hover:w-[110px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
             lg:hover:bg-darkCyan`}
             >
               <img
-                className={`${isShownAbout ? "invert" : "invert-0"}`}
-                src={require("./assets/profile.png")}
+                className={`${isShownAbout ? 'invert' : 'invert-0'}`}
+                src={require('./assets/profile.png')}
               />
               About
             </li>
@@ -166,15 +165,15 @@ function App() {
               onMouseLeave={resume}
               className={`${
                 isShownResume
-                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
-                  : "bg-whitesmoke lg:bg-whitesmoke"
+                  ? 'bg-darkCyan lg:bg-darkCyan text-white lg:text-white'
+                  : 'bg-whitesmoke lg:bg-whitesmoke'
               }bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
           lg:w-[56px] lg: lg:text-transparent lg:hover:w-[120px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
           lg:hover:bg-darkCyan`}
             >
               <img
-                className={`${isShownResume ? "invert" : "invert-0"}`}
-                src={require("./assets/resume.png")}
+                className={`${isShownResume ? 'invert' : 'invert-0'}`}
+                src={require('./assets/resume.png')}
               />
               Resume
             </li>
@@ -185,17 +184,15 @@ function App() {
               onMouseLeave={portfolio}
               className={`${
                 isShownPortfolio
-                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
-                  : "bg-whitesmoke lg:bg-whitesmoke"
+                  ? 'bg-darkCyan lg:bg-darkCyan text-white lg:text-white'
+                  : 'bg-whitesmoke lg:bg-whitesmoke'
               }bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
           lg:w-[56px] lg: lg:text-transparent lg:hover:w-[120px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
           lg:hover:bg-darkCyan`}
             >
               <img
-                className={`${
-                  isShownPortfolio ? "invert" : "invert-0"
-                }`}
-                src={require("./assets/portfolio.png")}
+                className={`${isShownPortfolio ? 'invert' : 'invert-0'}`}
+                src={require('./assets/portfolio.png')}
               />
               Portfolio
             </li>
@@ -206,17 +203,15 @@ function App() {
               onMouseLeave={contacts}
               className={`${
                 isShownContacts
-                  ? "bg-darkCyan lg:bg-darkCyan text-white lg:text-white"
-                  : "bg-whitesmoke lg:bg-whitesmoke"
+                  ? 'bg-darkCyan lg:bg-darkCyan text-white lg:text-white'
+                  : 'bg-whitesmoke lg:bg-whitesmoke'
               }bg-whitesmoke w-[280px] h-14 p-4 rounded-[100px] flex justify-start items-center gap-1
         lg:w-[56px] lg: lg:text-transparent lg:hover:w-[120px] lg:hover:cursor-pointer lg:duration-300 lg:hover:text-white
         lg:hover:bg-darkCyan`}
             >
               <img
-                className={`${
-                  isShownContacts ? "invert" : "invert-0"
-                }`}
-                src={require("./assets/contacts.png")}
+                className={`${isShownContacts ? 'invert' : 'invert-0'}`}
+                src={require('./assets/contacts.png')}
               />
               Contacts
             </li>
@@ -255,45 +250,23 @@ function App() {
         <div className="md:flex md:flex-col md:gap-5 lg:animate-[moveLeft_0.8s_ease-in-out]">
           <img
             className="mt-5 md:h-[500px] md:w-[500px] lg:h-[390px] lg:w-[390px]"
-            src={require("./assets/header-image.jpg")}
+            src={require('./assets/header-image.jpg')}
           />
           <div className="flex items-center gap-1 justify-evenly mt-5 md:flex md:gap-1">
             <a href="https://twitter.com/vjast_" target="_blank">
-              <IonIcon
-                size="large"
-                color="dark"
-                name="logo-twitter"
-              ></IonIcon>
+              <IonIcon size="large" color="dark" name="logo-twitter"></IonIcon>
             </a>
-            <a
-              href="https://www.facebook.com/tjhayzz"
-              target="_blank"
-            >
-              <IonIcon
-                size="large"
-                color="dark"
-                name="logo-facebook"
-              ></IonIcon>
+            <a href="https://www.facebook.com/tjhayzz" target="_blank">
+              <IonIcon size="large" color="dark" name="logo-facebook"></IonIcon>
             </a>
-            <a
-              href="https://www.instagram.com/vjast_/"
-              target="_blank"
-            >
-              <IonIcon
-                size="large"
-                color="dark"
-                name="logo-instagram"
-              ></IonIcon>
+            <a href="https://www.instagram.com/vjast_/" target="_blank">
+              <IonIcon size="large" color="dark" name="logo-instagram"></IonIcon>
             </a>
             <a
               href="https://www.linkedin.com/in/jastoni-villanueva-8a257b234/"
               target="_blank"
             >
-              <IonIcon
-                size="large"
-                color="dark"
-                name="logo-linkedin"
-              ></IonIcon>
+              <IonIcon size="large" color="dark" name="logo-linkedin"></IonIcon>
             </a>
           </div>
         </div>
@@ -313,17 +286,16 @@ function App() {
           <hr className="w-9 border border-gray" />
         </div>
         <p className="text-[16px] leading-[35px] text-justify font-poppins mt-5">
-          I am a talented, ambitious and hardworking individual, with
-          broad skills and experience in mobile and web developing,
-          social media and leading projects. A key strength is
-          communication; building strong relationships with people in
-          order to deliver the best results.
+          I am a talented, ambitious and hardworking individual, with broad skills
+          and experience in mobile and web developing, social media and leading
+          projects. A key strength is communication; building strong relationships
+          with people in order to deliver the best results.
         </p>
         <div className="lg:flex lg:flex-row md:flex md:flex-col md:items-center">
           <img
             className="shadow-md mt-2 md:w-[400px] md:h-[550px]
             lg:w-[350px] lg:h-[480px] xl:w-[350px] xl:h-[375px]"
-            src={require("./assets/iconics.jpg")}
+            src={require('./assets/iconics.jpg')}
           />
           <div className="lg:ml-5">
             <div>
@@ -331,11 +303,10 @@ function App() {
                 Front-End Web Developer
               </h3>
               <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
-                Exceptionally creative and dependable Entry Level Web
-                Developer with a stellar customer service record and
-                superb work ethic. Broadly and deeply knowledgeable in
-                a wide variety of computer languages as well as the
-                principles and techniques of website construction and
+                Exceptionally creative and dependable Entry Level Web Developer with
+                a stellar customer service record and superb work ethic. Broadly and
+                deeply knowledgeable in a wide variety of computer languages as well
+                as the principles and techniques of website construction and
                 maintenance.
               </p>
             </div>
@@ -346,20 +317,18 @@ function App() {
               >
                 <ul className="list-disc">
                   <li>
-                    <span className="font-bold">Birthday: </span> 13
-                    September 2000
+                    <span className="font-bold">Birthday: </span> 13 September 2000
                   </li>
                   <li>
-                    <span className="font-bold">Website: </span>{" "}
+                    <span className="font-bold">Website: </span>{' '}
                     https://github.com/vjastoni
                   </li>
                   <li>
-                    <span className="font-bold">Phone: </span>{" "}
-                    09452272264
+                    <span className="font-bold">Phone: </span> 09452272264
                   </li>
                   <li>
-                    <span className="font-bold">College: </span> STI
-                    College Global City
+                    <span className="font-bold">College: </span> STI College Global
+                    City
                   </li>
                 </ul>
                 <ul className="list-disc md:ml-14">
@@ -367,26 +336,22 @@ function App() {
                     <span className="font-bold">Age: </span> 22
                   </li>
                   <li>
-                    <span className="font-bold">Year: </span> 4th Year
-                    College
+                    <span className="font-bold">Year: </span> 4th Year College
                   </li>
                   <li>
-                    <span className="font-bold">Email: </span>{" "}
-                    vjastoni13@gmail.com
+                    <span className="font-bold">Email: </span> vjastoni13@gmail.com
                   </li>
                   <li>
-                    <span className="font-bold">Freelance: </span> Not
-                    Available
+                    <span className="font-bold">Freelance: </span> Not Available
                   </li>
                 </ul>
               </div>
 
               <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
-                Hard-working Information Technology major student
-                (1.29 GWA) currently attending STI College global
-                City, with 4 months of work experience. Frequently
-                praised as diligent by my peers, I can be relied upon
-                to help your company achieve its goals.
+                Hard-working Information Technology major student (1.29 GWA)
+                currently attending STI College global City, with 4 months of work
+                experience. Frequently praised as diligent by my peers, I can be
+                relied upon to help your company achieve its goals.
               </p>
             </div>
           </div>
@@ -400,12 +365,10 @@ function App() {
           <hr className="w-9 border border-gray" />
         </div>
         <div className=" w-full mt-5 flex flex-col justify-start items-start">
-          <h2 className="font-poppins text-[26px] font-bold">
-            Look What I can Do
-          </h2>
+          <h2 className="font-poppins text-[26px] font-bold">Look What I can Do</h2>
           <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
-            These are the skills that I have learned while studying at
-            STI Collge Global City. Along with my self-study.
+            These are the skills that I have learned while studying at STI Collge
+            Global City. Along with my self-study.
           </p>
           <div
             className="mt-2 w-full flex flex-col justify-center gap-3 font-poppins
@@ -415,33 +378,29 @@ function App() {
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
                 <img
                   className="w-[40px] h-[40px]"
-                  src={require("./assets/html.png")}
+                  src={require('./assets/html.png')}
                 />
                 <p>
-                  <span className="font-bold uppercase">HTML</span> -
-                  Advanced
+                  <span className="font-bold uppercase">HTML</span> - Advanced
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
                 <img
                   className="w-[40px] h-[40px]"
-                  src={require("./assets/js.jpg")}
+                  src={require('./assets/js.jpg')}
                 />
                 <p>
-                  <span className="font-bold uppercase">
-                    Javascript
-                  </span>{" "}
-                  - Intermediate
+                  <span className="font-bold uppercase">Javascript</span> -
+                  Intermediate
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
                 <img
                   className="w-[40px] h-[40px]"
-                  src={require("./assets/css.png")}
+                  src={require('./assets/css.png')}
                 />
                 <p>
-                  <span className="font-bold uppercase">CSS</span> -
-                  Advanced
+                  <span className="font-bold uppercase">CSS</span> - Advanced
                 </p>
               </div>
             </div>
@@ -449,33 +408,25 @@ function App() {
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
                 <img
                   className="w-[40px] h-[40px]"
-                  src={require("./assets/java.png")}
+                  src={require('./assets/java.png')}
                 />
                 <p>
-                  <span className="font-bold uppercase">Java</span> -
-                  Intermediate
+                  <span className="font-bold uppercase">Java</span> - Intermediate
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
                 <img
                   className="w-[40px] h-[40px]"
-                  src={require("./assets/react.png")}
+                  src={require('./assets/react.png')}
                 />
                 <p>
-                  <span className="font-bold uppercase">
-                    React Js
-                  </span>{" "}
-                  - Beginner
+                  <span className="font-bold uppercase">React Js</span> - Beginner
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img
-                  className="w-[40px] h-[40px]"
-                  src={require("./assets/c.png")}
-                />
+                <img className="w-[40px] h-[40px]" src={require('./assets/c.png')} />
                 <p>
-                  <span className="font-bold uppercase">C#</span> -
-                  Intermediate
+                  <span className="font-bold uppercase">C#</span> - Intermediate
                 </p>
               </div>
             </div>
@@ -498,11 +449,10 @@ function App() {
             <hr className="w-9 border border-gray" />
           </div>
           <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2 lg:text-center lg:w-[90%] lg:ml-7">
-            I want to gain confidence and greatness using my potential
-            in the field of Front end Web Development and express my
-            innovative creative skills for self and my future company
-            growth. After 2-3 years of experience, I want to pursue my
-            career as a full-stack Web Developer.
+            I want to gain confidence and greatness using my potential in the field
+            of Front end Web Development and express my innovative creative skills
+            for self and my future company growth. After 2-3 years of experience, I
+            want to pursue my career as a full-stack Web Developer.
           </p>
         </div>
         <div className="w-full lg:flex lg:flex-row lg:gap-[140px] lg:mt-5">
@@ -523,8 +473,8 @@ function App() {
                   Jastoni Villanueva
                 </h4>
                 <p className="italic font-[15px]">
-                  A 22-year old web developer currently studying at
-                  STI College Global City.
+                  A 22-year old web developer currently studying at STI College
+                  Global City.
                 </p>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
                   <li>North Signal Village, Taguig City</li>
@@ -556,15 +506,12 @@ function App() {
                   2017 - Present
                 </div>
                 <p className="italic font-[15px]">
-                  Bachelor of Science in Information Technology -
-                  Senior Highschool - College
+                  Bachelor of Science in Information Technology - Senior Highschool -
+                  College
                 </p>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
                   <li>Graduated with Honors</li>
-                  <li>
-                    HTML, CSS, Javascript, C#, Java, Android App
-                    Development
-                  </li>
+                  <li>HTML, CSS, Javascript, C#, Java, Android App Development</li>
                 </ul>
 
                 <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px] mt-1">
@@ -573,9 +520,7 @@ function App() {
                 <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
                   2013 - 2017
                 </div>
-                <p className="italic font-[15px]">
-                  Elementary - Junior Highschool
-                </p>
+                <p className="italic font-[15px]">Elementary - Junior Highschool</p>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
                   <li>Graduated with Honors</li>
                   <li>Visual Basic</li>
@@ -671,12 +616,12 @@ function App() {
             >
               <img
                 className={` visible duration-300 w-10 h-10 invert `}
-                src={require("./assets/clickhere.png")}
+                src={require('./assets/clickhere.png')}
               />
               <img
                 className="w-64 h-[380px] -z-20 border absolute border-gray-100 rounded-md shadow-md
                 lg:w-[290px] lg:h-[360px] hover:scale-110"
-                src={require("./assets/BasicCalculator.png")}
+                src={require('./assets/BasicCalculator.png')}
               />
             </div>
 
@@ -689,16 +634,14 @@ function App() {
             >
               <img
                 className={`${
-                  isHoverBsq
-                    ? "visible duration-300"
-                    : "hidden duration-300"
+                  isHoverBsq ? 'visible duration-300' : 'hidden duration-300'
                 } w-10 h-10 invert `}
-                src={require("./assets/clickhere.png")}
+                src={require('./assets/clickhere.png')}
               />
               <img
                 className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md
                 lg:w-[356px] lg:h-[258px] hover:scale-110"
-                src={require("./assets/Digiserve.png")}
+                src={require('./assets/Digiserve.png')}
               />
             </div>
 
@@ -710,15 +653,13 @@ function App() {
             >
               <img
                 className={`${
-                  isHoverDg
-                    ? "visible duration-300"
-                    : "hidden duration-300"
+                  isHoverDg ? 'visible duration-300' : 'hidden duration-300'
                 } w-10 h-10 invert `}
-                src={require("./assets/clickhere.png")}
+                src={require('./assets/clickhere.png')}
               />
               <img
                 className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px] hover:scale-110"
-                src={require("./assets/bsq.png")}
+                src={require('./assets/bsq.png')}
               />
             </div>
             <div
@@ -729,15 +670,13 @@ function App() {
             >
               <img
                 className={`${
-                  isHoverDiaeta
-                    ? "visible duration-300"
-                    : "hidden duration-300"
+                  isHoverDiaeta ? 'visible duration-300' : 'hidden duration-300'
                 } w-10 h-10 invert `}
-                src={require("./assets/clickhere.png")}
+                src={require('./assets/clickhere.png')}
               />
               <img
                 className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[529px] hover:scale-110"
-                src={require("./assets/Diaeta.png")}
+                src={require('./assets/Diaeta.png')}
               />
             </div>
 
@@ -749,15 +688,13 @@ function App() {
             >
               <img
                 className={`${
-                  isHoverRMS
-                    ? "visible duration-300"
-                    : "hidden duration-300"
+                  isHoverRMS ? 'visible duration-300' : 'hidden duration-300'
                 } w-10 h-10 invert `}
-                src={require("./assets/clickhere.png")}
+                src={require('./assets/clickhere.png')}
               />
               <img
                 className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[532px] hover:scale-110"
-                src={require("./assets/RMS.png")}
+                src={require('./assets/RMS.png')}
               />
             </div>
           </div>
@@ -789,16 +726,12 @@ function App() {
               hover:bg-darkCyan duration-300"
                 >
                   <img
-                    className={`${
-                      isHoverLocation ? "invert" : "invert-0"
-                    } w-7 h-7`}
-                    src={require("./assets/location.png")}
+                    className={`${isHoverLocation ? 'invert' : 'invert-0'} w-7 h-7`}
+                    src={require('./assets/location.png')}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="font-raleway text-[22px] font-bold">
-                    Location:
-                  </h2>
+                  <h2 className="font-raleway text-[22px] font-bold">Location:</h2>
                   <p className="font-poppins text-[#728394] text-[14px]">
                     North Signal Village Taguig City
                   </p>
@@ -813,16 +746,12 @@ function App() {
               hover:bg-darkCyan duration-300"
                 >
                   <img
-                    className={`${
-                      isHoverEmail ? "invert" : "invert-0"
-                    } w-7 h-7`}
-                    src={require("./assets/contacts.png")}
+                    className={`${isHoverEmail ? 'invert' : 'invert-0'} w-7 h-7`}
+                    src={require('./assets/contacts.png')}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="font-raleway text-[22px] font-bold">
-                    Email:
-                  </h2>
+                  <h2 className="font-raleway text-[22px] font-bold">Email:</h2>
                   <p className="font-poppins text-[#728394] text-[14px]">
                     vjastoni13@gmail.com
                   </p>
@@ -837,16 +766,12 @@ function App() {
                 hover:bg-darkCyan duration-300"
                 >
                   <img
-                    className={`${
-                      isHoverCall ? "invert" : "invert-0"
-                    } w-7 h-7`}
-                    src={require("./assets/call.png")}
+                    className={`${isHoverCall ? 'invert' : 'invert-0'} w-7 h-7`}
+                    src={require('./assets/call.png')}
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="font-raleway text-[22px] font-bold">
-                    Call:
-                  </h2>
+                  <h2 className="font-raleway text-[22px] font-bold">Call:</h2>
                   <p className="font-poppins text-[#728394] text-[14px]">
                     09452272264
                   </p>
@@ -921,32 +846,17 @@ function App() {
           <div className="w-full flex items-center justify-center gap-2 mt-5">
             <a href="https://twitter.com/vjast_" target="_blank">
               <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-                <IonIcon
-                  color="primary"
-                  name="logo-twitter"
-                ></IonIcon>
+                <IonIcon color="primary" name="logo-twitter"></IonIcon>
               </div>
             </a>
-            <a
-              href="https://www.facebook.com/tjhayzz"
-              target="_blank"
-            >
+            <a href="https://www.facebook.com/tjhayzz" target="_blank">
               <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-                <IonIcon
-                  color="primary"
-                  name="logo-facebook"
-                ></IonIcon>
+                <IonIcon color="primary" name="logo-facebook"></IonIcon>
               </div>
             </a>
-            <a
-              href="https://www.instagram.com/vjast_/"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/vjast_/" target="_blank">
               <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-                <IonIcon
-                  color="primary"
-                  name="logo-instagram"
-                ></IonIcon>
+                <IonIcon color="primary" name="logo-instagram"></IonIcon>
               </div>
             </a>
             <a
@@ -954,22 +864,14 @@ function App() {
               target="_blank"
             >
               <div className="h-[36px] w-[36px] bg-darkCyan rounded-full flex items-center justify-center">
-                <IonIcon
-                  color="primary"
-                  name="logo-linkedin"
-                ></IonIcon>
+                <IonIcon color="primary" name="logo-linkedin"></IonIcon>
               </div>
             </a>
           </div>
           <div className="text-center flex flex-col mt-10 items-center">
-            <p className="text-[14px]">
-              ©Web Portfolio. All Rights Reserved
-            </p>
+            <p className="text-[14px]">©Web Portfolio. All Rights Reserved</p>
             <p className="text-[13px]">
-              Developed by{" "}
-              <span className="text-darkCyan">
-                Jastoni Villanueva
-              </span>
+              Developed by <span className="text-darkCyan">Jastoni Villanueva</span>
             </p>
           </div>
         </div>
