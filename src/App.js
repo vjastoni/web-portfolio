@@ -10,11 +10,6 @@ function App() {
   const [isShownResume, setIsShownResume] = useState(false);
   const [isShownPortfolio, setIsShownPortfolio] = useState(false);
   const [isShownContacts, setIsShownContacts] = useState(false);
-  const [isHoverDiaeta, setIsHoverDiaeta] = useState(false);
-  const [isHoverRMS, setIsHoverRMS] = useState(false);
-  const [isHoverCalc, setIsHoverCalc] = useState(false);
-  const [isHoverDg, setIsHoverDg] = useState(false);
-  const [isHoverBsq, setIsHoverBsq] = useState(false);
   const [isHoverLocation, setIsHoverLocation] = useState(false);
   const [isHoverEmail, setIsHoverEmail] = useState(false);
   const [isHoverCall, setIsHoverCall] = useState(false);
@@ -236,14 +231,14 @@ function App() {
             <br /> STI College Global City
           </p>
           <a
-            href="https://drive.google.com/file/d/1XeyuWKMZNeNjnQlYMKSM0k2dDsWSy3Te/view?usp=sharing"
+            href="https://drive.google.com/file/d/1QvC-StoS1uIDAnNu5bAYA1CaQjbnANmY/view?usp=sharing"
             target="_blank"
           >
             <div
-              className="w-24 mt-2 border border-darkGray flex items-center justify-center rounded-md hover:bg-darkGray hover:cursor-pointer
+              className="w-[150px] mt-2 border border-darkGray flex items-center justify-center rounded-md hover:bg-darkGray hover:cursor-pointer
           hover:text-white duration-300"
             >
-              <h1 className="p-2">Check CV</h1>
+              <h1 className="p-2">Check Resume</h1>
             </div>
           </a>
         </div>
@@ -293,9 +288,9 @@ function App() {
         </p>
         <div className="lg:flex lg:flex-row md:flex md:flex-col md:items-center">
           <img
-            className="shadow-md mt-2 md:w-[400px] md:h-[550px]
+            className="shadow-md mt-2 md:w-[400px] md:h-[550px] rounded-md
             lg:w-[350px] lg:h-[480px] xl:w-[350px] xl:h-[375px]"
-            src={require('./assets/iconics.jpg')}
+            src={require('./assets/gradPic.png')}
           />
           <div className="lg:ml-5">
             <div>
@@ -397,10 +392,11 @@ function App() {
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
                 <img
                   className="w-[40px] h-[40px]"
-                  src={require('./assets/css.png')}
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
                 />
                 <p>
-                  <span className="font-bold uppercase">CSS</span> - Advanced
+                  <span className="font-bold uppercase">CSS (Tailwind)</span> -
+                  Advanced
                 </p>
               </div>
             </div>
@@ -420,13 +416,18 @@ function App() {
                   src={require('./assets/react.png')}
                 />
                 <p>
-                  <span className="font-bold uppercase">React Js</span> - Beginner
+                  <span className="font-bold uppercase">React Js</span> -
+                  Intermediate
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img className="w-[40px] h-[40px]" src={require('./assets/c.png')} />
+                <img
+                  className="w-[40px] h-[40px]"
+                  src={require('./assets/nodejs.png')}
+                />
                 <p>
-                  <span className="font-bold uppercase">C#</span> - Intermediate
+                  <span className="font-bold uppercase">Node JS (Express)</span> -
+                  Beginner
                 </p>
               </div>
             </div>
@@ -607,95 +608,173 @@ function App() {
           </h3>
           <div
             className="w-full flex flex-col items-center gap-5 md:flex md:flex-row md:flex-wrap md:items-center md:justify-center
-          md:gap-5 lg:mt-5 lg:gap-16"
+          md:gap-5 lg:mt-8 lg:gap-16 font-poppins"
           >
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/sflix-clone.png')}
+                />
+              </div>
+              <a
+                href="https://sflix-clone.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">sflix-clone</p>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/schedule-generator.png')}
+                />
+              </div>
+              <a
+                href="https://sflix-clone.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Schedule Generator
+                </p>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/react-meals.png')}
+                />
+              </div>
+              <a
+                href="https://vjastoni.github.io/better-food-order-app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">Food Order App</p>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/Digiserve.png')}
+                />
+              </div>
+              <a
+                href="https://github.com/vjastoni/DigiServe"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">Digiserve</p>
+              </a>
+            </div>
+
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/bsq.png')}
+                />
+              </div>
+              <a
+                href="https://lawfulbsqlaw.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Lawful: BSQ Law Information System
+                </p>
+              </a>
+            </div>
+
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/design-1.png')}
+                />
+              </div>
+              <a
+                href="https://vjastoni.github.io/design-1/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Frontend Mentor Challenge
+                </p>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/design-2.png')}
+                />
+              </div>
+              <a
+                href="https://design-2.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Frontend Mentor Challenge 2
+                </p>
+              </a>
+            </div>
             {/* BASIC CALCULATOR */}
-            <div
-              className="w-64 h-[380px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[290px] lg:h-[360px] lg:hover:scale-110"
-            >
-              <img
-                className={` visible duration-300 w-10 h-10 invert `}
-                src={require('./assets/clickhere.png')}
-              />
-              <img
-                className="w-64 h-[380px] -z-20 border absolute border-gray-100 rounded-md shadow-md
-                lg:w-[290px] lg:h-[360px] hover:scale-110"
-                src={require('./assets/BasicCalculator.png')}
-              />
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer hover:scale-110 lg:w-[356px] lg:h-[200px]">
+                <img
+                  className="w-[350px] h-[200px] -z-20 border border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px]"
+                  src={require('./assets/calculator.png')}
+                />
+              </div>
+              <a
+                href="https://vjastoni.github.io/simple-calculator/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Simple Calculator
+                </p>
+              </a>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-64 h-[380px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer lg:w-[290px] lg:h-[360px] hover:scale-110">
+                <img
+                  className="w-64 h-[380px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[240px] lg:h-[360px]"
+                  src={require('./assets/Diaeta.png')}
+                />
+              </div>
+              <a
+                href="https://github.com/vjastoni/Diaeta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">Diaeta</p>
+              </a>
             </div>
 
-            {/* DIGISERVE */}
-            <div
-              onMouseEnter={() => setIsHoverBsq(true)}
-              onMouseLeave={() => setIsHoverBsq(false)}
-              className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[258px] hover:scale-110"
-            >
-              <img
-                className={`${
-                  isHoverBsq ? 'visible duration-300' : 'hidden duration-300'
-                } w-10 h-10 invert `}
-                src={require('./assets/clickhere.png')}
-              />
-              <img
-                className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md
-                lg:w-[356px] lg:h-[258px] hover:scale-110"
-                src={require('./assets/Digiserve.png')}
-              />
-            </div>
-
-            <div
-              onMouseEnter={() => setIsHoverDg(true)}
-              onMouseLeave={() => setIsHoverDg(false)}
-              className="w-[350px] h-[200px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[200px] hover:scale-110"
-            >
-              <img
-                className={`${
-                  isHoverDg ? 'visible duration-300' : 'hidden duration-300'
-                } w-10 h-10 invert `}
-                src={require('./assets/clickhere.png')}
-              />
-              <img
-                className="w-[350px] h-[200px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[200px] hover:scale-110"
-                src={require('./assets/bsq.png')}
-              />
-            </div>
-            <div
-              onMouseEnter={() => setIsHoverDiaeta(true)}
-              onMouseLeave={() => setIsHoverDiaeta(false)}
-              className="w-64 h-[420px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[529px] hover:scale-110"
-            >
-              <img
-                className={`${
-                  isHoverDiaeta ? 'visible duration-300' : 'hidden duration-300'
-                } w-10 h-10 invert `}
-                src={require('./assets/clickhere.png')}
-              />
-              <img
-                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[529px] hover:scale-110"
-                src={require('./assets/Diaeta.png')}
-              />
-            </div>
-
-            <div
-              onMouseEnter={() => setIsHoverRMS(true)}
-              onMouseLeave={() => setIsHoverRMS(false)}
-              className="w-64 h-[420px] mt-2 flex flex-col items-center justify-center rounded-md 
-            hover:bg-modalBg duration-300 hover:cursor-pointer lg:w-[356px] lg:h-[532px] hover:scale-110"
-            >
-              <img
-                className={`${
-                  isHoverRMS ? 'visible duration-300' : 'hidden duration-300'
-                } w-10 h-10 invert `}
-                src={require('./assets/clickhere.png')}
-              />
-              <img
-                className="w-64 h-[420px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[356px] lg:h-[532px] hover:scale-110"
-                src={require('./assets/RMS.png')}
-              />
+            <div className="flex flex-col items-center justify-center">
+              <div className="w-64 h-[380px] mt-2 flex flex-col items-center justify-center rounded-md duration-300 hover:cursor-pointer lg:w-[290px] lg:h-[360px] hover:scale-110">
+                <img
+                  className="w-64 h-[380px] -z-20 border absolute border-gray-100 rounded-md shadow-md lg:w-[240px] lg:h-[360px]"
+                  src={require('./assets/RMS.png')}
+                />
+              </div>
+              <a
+                href="https://github.com/vjastoni/Restaurant-Management-System"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Restaurant Management System
+                </p>
+              </a>
             </div>
           </div>
         </div>
