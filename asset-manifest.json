@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/web-portfolio/static/css/main.b4fc4491.css",
-    "main.js": "/web-portfolio/static/js/main.fc804906.js",
+    "main.css": "/web-portfolio/static/css/main.86a5f698.css",
+    "main.js": "/web-portfolio/static/js/main.6a59a73a.js",
     "static/media/bsq.png": "/web-portfolio/static/media/bsq.63f5a998e9402a1025b4.png",
+    "static/media/react-meals.png": "/web-portfolio/static/media/react-meals.95268ea9f8cbc1c6774e.png",
+    "static/media/sflix-clone.png": "/web-portfolio/static/media/sflix-clone.498d6c20108436583b14.png",
     "static/media/header-image.jpg": "/web-portfolio/static/media/header-image.84437258534c0cde5bc4.jpg",
-    "static/media/iconics.jpg": "/web-portfolio/static/media/iconics.5e43f7b02a159fbae7f4.jpg",
+    "static/media/gradPic.png": "/web-portfolio/static/media/gradPic.26cb7e9301fd067ef60a.png",
     "static/media/react.png": "/web-portfolio/static/media/react.73dbb5bcec516da82694.png",
     "static/media/Digiserve.png": "/web-portfolio/static/media/Digiserve.1e49a5f1eefb1d4bb532.png",
+    "static/media/schedule-generator.png": "/web-portfolio/static/media/schedule-generator.e4be8730d9aac3f5cc05.png",
+    "static/media/design-1.png": "/web-portfolio/static/media/design-1.b1070e53ff7d7bbb5011.png",
     "static/media/RMS.png": "/web-portfolio/static/media/RMS.30c42541c3ed4f94d29c.png",
     "static/media/js.jpg": "/web-portfolio/static/media/js.5648ae0aeb0182cbd857.jpg",
-    "static/media/c.png": "/web-portfolio/static/media/c.15f7b7fa596f29c44592.png",
+    "static/media/design-2.png": "/web-portfolio/static/media/design-2.84ed0d881aff29526c93.png",
+    "static/media/calculator.png": "/web-portfolio/static/media/calculator.cf8e27627a45f8019b93.png",
     "static/media/Diaeta.png": "/web-portfolio/static/media/Diaeta.d64675452a6c7deb18d6.png",
     "static/media/java.png": "/web-portfolio/static/media/java.f5dd86c3ef6ef3f85acf.png",
-    "static/media/css.png": "/web-portfolio/static/media/css.463e319bad8e0edf1ef7.png",
-    "static/media/BasicCalculator.png": "/web-portfolio/static/media/BasicCalculator.b6498f99e156177fd521.png",
     "static/media/html.png": "/web-portfolio/static/media/html.ff3cf75e3b7cbb4ea77c.png",
     "index.html": "/web-portfolio/index.html",
-    "main.b4fc4491.css.map": "/web-portfolio/static/css/main.b4fc4491.css.map",
-    "main.fc804906.js.map": "/web-portfolio/static/js/main.fc804906.js.map"
+    "main.86a5f698.css.map": "/web-portfolio/static/css/main.86a5f698.css.map",
+    "main.6a59a73a.js.map": "/web-portfolio/static/js/main.6a59a73a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4fc4491.css",
-    "static/js/main.fc804906.js"
+    "static/css/main.86a5f698.css",
+    "static/js/main.6a59a73a.js"
   ]
 }
