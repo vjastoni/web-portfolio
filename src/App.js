@@ -673,7 +673,9 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">Digiserve (C#)</p>
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Digiserve (C# / SQL)
+                </p>
               </a>
             </div>
 
