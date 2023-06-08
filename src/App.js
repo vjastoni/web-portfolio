@@ -622,7 +622,9 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">sflix-clone</p>
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  sflix-clone (Node JS - Express JS / EJS)
+                </p>
               </a>
             </div>
             <div className="flex flex-col items-center justify-center">
@@ -633,12 +635,12 @@ function App() {
                 />
               </div>
               <a
-                href="https://sflix-clone.onrender.com"
+                href="https://github.com/vjastoni/schedule-generator-sti"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Schedule Generator
+                  Schedule Generator (Next JS / MySQL)
                 </p>
               </a>
             </div>
@@ -654,7 +656,9 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">Food Order App</p>
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Food Order App (React JS)
+                </p>
               </a>
             </div>
             <div className="flex flex-col items-center justify-center">
@@ -669,7 +673,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">Digiserve</p>
+                <p className="mt-2 font-bold hover:text-darkCyan">Digiserve (C#)</p>
               </a>
             </div>
 
@@ -686,7 +690,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Lawful: BSQ Law Information System
+                  Lawful: BSQ Law Information System (React JS / Firebase)
                 </p>
               </a>
             </div>
@@ -704,7 +708,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Frontend Mentor Challenge
+                  Frontend Mentor Challenge (HTML / CSS)
                 </p>
               </a>
             </div>
@@ -721,7 +725,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Frontend Mentor Challenge 2
+                  Frontend Mentor Challenge 2 (React JS)
                 </p>
               </a>
             </div>
@@ -739,7 +743,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Simple Calculator
+                  Simple Calculator (HTML / CSS / JavaScript)
                 </p>
               </a>
             </div>
@@ -755,7 +759,9 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">Diaeta</p>
+                <p className="mt-2 font-bold hover:text-darkCyan">
+                  Diaeta (Android Studio / Java)
+                </p>
               </a>
             </div>
 
@@ -772,7 +778,7 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Restaurant Management System
+                  Restaurant Management System (Android Studio / Java)
                 </p>
               </a>
             </div>
