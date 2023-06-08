@@ -692,7 +692,9 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Lawful: BSQ Law Information System (React JS / Firebase)
+                  Lawful: BSQ Law Information System
+                  <br />
+                  <p className="text-center">(React JS / Firebase)</p>
                 </p>
               </a>
             </div>
@@ -744,8 +746,10 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">
-                  Simple Calculator (HTML / CSS / JavaScript)
+                <p className="mt-2 font-bold hover:text-darkCyan text-center">
+                  Simple Calculator
+                  <br />
+                  <p className="text-center">(HTML / CSS / JavaScript)</p>
                 </p>
               </a>
             </div>
@@ -780,7 +784,9 @@ function App() {
                 rel="noopener noreferrer"
               >
                 <p className="mt-2 font-bold hover:text-darkCyan">
-                  Restaurant Management System (Android Studio / Java)
+                  Restaurant Management System
+                  <br />
+                  <p className="text-center">(Android Studio / Java)</p>
                 </p>
               </a>
             </div>
