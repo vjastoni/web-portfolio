@@ -231,7 +231,7 @@ function App() {
             <br /> STI College Global City
           </p>
           <a
-            href="https://drive.google.com/file/d/1_W1I1Pg83gNiv_hNY5AHT_z5FksVM8Vj/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1CtCxSbJp_XFORL8aTqWvnNDmVZHohEwa/view?usp=drive_link"
             target="_blank"
           >
             <div
