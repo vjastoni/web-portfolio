@@ -65,12 +65,7 @@ function App() {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        'service_vv8m11o',
-        'template_3ckl7o7',
-        form.current,
-        't5xsrbyqMnilHRXPO'
-      )
+      .sendForm('service_vv8m11o', 'template_3ckl7o7', form.current, 't5xsrbyqMnilHRXPO')
       .then(
         (result) => {
           console.log(result.text);
@@ -231,7 +226,7 @@ function App() {
             <br /> STI College Global City
           </p>
           <a
-            href="https://drive.google.com/file/d/1CtCxSbJp_XFORL8aTqWvnNDmVZHohEwa/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1wtl1GKdF3ogZjBEXRvU80PhVG__JdHz7/view?usp=drive_link"
             target="_blank"
           >
             <div
@@ -281,10 +276,10 @@ function App() {
           <hr className="w-9 border border-gray" />
         </div>
         <p className="text-[16px] leading-[35px] text-justify font-poppins mt-5">
-          I am a talented, ambitious and hardworking individual, with broad skills
-          and experience in mobile and web developing, social media and leading
-          projects. A key strength is communication; building strong relationships
-          with people in order to deliver the best results.
+          I am a talented, ambitious and hardworking individual, with broad skills and
+          experience in mobile and web developing, social media and leading projects. A
+          key strength is communication; building strong relationships with people in
+          order to deliver the best results.
         </p>
         <div className="lg:flex lg:flex-row md:flex md:flex-col md:items-center">
           <img
@@ -298,11 +293,10 @@ function App() {
                 Front-End Web Developer
               </h3>
               <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
-                Exceptionally creative and dependable Entry Level Web Developer with
-                a stellar customer service record and superb work ethic. Broadly and
-                deeply knowledgeable in a wide variety of computer languages as well
-                as the principles and techniques of website construction and
-                maintenance.
+                Exceptionally creative and dependable Entry Level Web Developer with a
+                stellar customer service record and superb work ethic. Broadly and deeply
+                knowledgeable in a wide variety of computer languages as well as the
+                principles and techniques of website construction and maintenance.
               </p>
             </div>
             <div>
@@ -322,8 +316,7 @@ function App() {
                     <span className="font-bold">Phone: </span> 09452272264
                   </li>
                   <li>
-                    <span className="font-bold">College: </span> STI College Global
-                    City
+                    <span className="font-bold">College: </span> STI College Global City
                   </li>
                 </ul>
                 <ul className="list-disc md:ml-14">
@@ -343,10 +336,10 @@ function App() {
               </div>
 
               <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
-                Hard-working Information Technology major student (1.29 GWA)
-                currently attending STI College global City, with 4 months of work
-                experience. Frequently praised as diligent by my peers, I can be
-                relied upon to help your company achieve its goals.
+                Hard-working Information Technology major student (1.29 GWA) currently
+                attending STI College global City, with 4 months of work experience.
+                Frequently praised as diligent by my peers, I can be relied upon to help
+                your company achieve its goals.
               </p>
             </div>
           </div>
@@ -362,8 +355,8 @@ function App() {
         <div className=" w-full mt-5 flex flex-col justify-start items-start">
           <h2 className="font-poppins text-[26px] font-bold">Look What I can Do</h2>
           <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2">
-            These are the skills that I have learned while studying at STI Collge
-            Global City. Along with my self-study.
+            These are the skills that I have learned while studying at STI Collge Global
+            City. Along with my self-study.
           </p>
           <div
             className="mt-2 w-full flex flex-col justify-center gap-3 font-poppins
@@ -371,22 +364,15 @@ function App() {
           >
             <div className="flex flex-col gap-3 lg:flex lg:flex-col lg:gap-3 lg:w-full">
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img
-                  className="w-[40px] h-[40px]"
-                  src={require('./assets/html.png')}
-                />
+                <img className="w-[40px] h-[40px]" src={require('./assets/html.png')} />
                 <p>
                   <span className="font-bold uppercase">HTML</span> - Advanced
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img
-                  className="w-[40px] h-[40px]"
-                  src={require('./assets/js.jpg')}
-                />
+                <img className="w-[40px] h-[40px]" src={require('./assets/js.jpg')} />
                 <p>
-                  <span className="font-bold uppercase">Javascript</span> -
-                  Intermediate
+                  <span className="font-bold uppercase">Javascript</span> - Intermediate
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
@@ -395,36 +381,25 @@ function App() {
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
                 />
                 <p>
-                  <span className="font-bold uppercase">CSS (Tailwind)</span> -
-                  Advanced
+                  <span className="font-bold uppercase">CSS (Tailwind)</span> - Advanced
                 </p>
               </div>
             </div>
             <div className="flex flex-col gap-3 lg:flex lg:flex-col lg:gap-3 lg:w-full">
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img
-                  className="w-[40px] h-[40px]"
-                  src={require('./assets/java.png')}
-                />
+                <img className="w-[40px] h-[40px]" src={require('./assets/java.png')} />
                 <p>
                   <span className="font-bold uppercase">Java</span> - Intermediate
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img
-                  className="w-[40px] h-[40px]"
-                  src={require('./assets/react.png')}
-                />
+                <img className="w-[40px] h-[40px]" src={require('./assets/react.png')} />
                 <p>
-                  <span className="font-bold uppercase">React Js</span> -
-                  Intermediate
+                  <span className="font-bold uppercase">React Js</span> - Intermediate
                 </p>
               </div>
               <div className="flex gap-2 items-center bg-[#d3dbe9] p-3 rounded-md">
-                <img
-                  className="w-[40px] h-[40px]"
-                  src={require('./assets/nodejs.png')}
-                />
+                <img className="w-[40px] h-[40px]" src={require('./assets/nodejs.png')} />
                 <p>
                   <span className="font-bold uppercase">Node JS (Express)</span> -
                   Beginner
@@ -450,10 +425,10 @@ function App() {
             <hr className="w-9 border border-gray" />
           </div>
           <p className="text-[16px] leading-[35px] text-justify font-poppins mt-2 lg:text-center lg:w-[90%] lg:ml-7">
-            I want to gain confidence and greatness using my potential in the field
-            of Front end Web Development and express my innovative creative skills
-            for self and my future company growth. After 2-3 years of experience, I
-            want to pursue my career as a full-stack Web Developer.
+            I want to gain confidence and greatness using my potential in the field of
+            Front end Web Development and express my innovative creative skills for self
+            and my future company growth. After 2-3 years of experience, I want to pursue
+            my career as a full-stack Web Developer.
           </p>
         </div>
         <div className="w-full lg:flex lg:flex-row lg:gap-[140px] lg:mt-5">
@@ -474,8 +449,8 @@ function App() {
                   Jastoni Villanueva
                 </h4>
                 <p className="italic font-[15px]">
-                  A 22-year old web developer currently studying at STI College
-                  Global City.
+                  A 22-year old web developer currently studying at STI College Global
+                  City.
                 </p>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
                   <li>North Signal Village, Taguig City</li>
@@ -511,7 +486,7 @@ function App() {
                   College
                 </p>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
-                  <li>Graduated with Honors</li>
+                  <li>Graduated With Latin Honors - Cum Laude</li>
                   <li>HTML, CSS, Javascript, C#, Java, Android App Development</li>
                 </ul>
 
@@ -529,60 +504,68 @@ function App() {
                 </ul>
               </div>
             </div>
+            <a
+              href="https://drive.google.com/file/d/1cGnLxMTYS8nxDrqsS75Xk-Ocut_CsTV2/view?usp=sharing"
+              target="_blank"
+            >
+              <p className="mt-2 text-darkCyan underline">Click to see my Certificates</p>
+            </a>
           </div>
           <div>
             <h3 className="font-poppins text-[26px] text-darkGray mt-2 font-bold">
-              Awards and Certificates
+              Work and Experience
             </h3>
             <div className="w-full flex mt-2 justify-start gap-3">
               <div className="flex flex-col justify-start items-center">
                 <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
-                <div className="h-[148px] border-l-2 border-darkCyan" />
+                <div className="h-[180px] border-l-2 border-darkCyan" />
+
                 <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
-                <div className="h-[84px] border-l-2 border-darkCyan" />
-                <div className="w-[17px] h-[17px] border-2 border-darkCyan rounded-full" />
-                <div className="h-[140px] border-l-2 border-darkCyan" />
+                <div className="h-[180px] border-l-2 border-darkCyan" />
               </div>
               <div className="flex flex-col gap-2 font-poppins">
                 <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
-                  4th Year College
+                  CWallet
                 </h4>
-                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
-                  2021 - 2022
+                <div className="w-[180px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  Dec 2023 - Mar 2024
                 </div>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
-                  <li>CodeFest Champion</li>
-                  <li>11th IT Skills Olympics</li>
-                  <li> SAP Business One</li>
+                  <li>
+                    Remote Frontend Web Developer at CWallet, Qatar startup finance tech,
+                    for 3 months.
+                  </li>
+                  <li>
+                    Transformed four projects into web applications using HTML, CSS
+                    (Bootstrap), JavaScript.
+                  </li>
+                  <li> Developed UI for public Web wallet, admin portal</li>
+                  <li>
+                    Engaged in Agile, peer programming, and API documentation with React
+                    JS.
+                  </li>
                 </ul>
                 <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
-                  1st Year College
+                  Accenture
                 </h4>
-                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
-                  2019
+                <div className="w-[180px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
+                  Feb 2023 - Apr 2023
                 </div>
                 <ul className="list-disc ml-6 flex flex-col gap-2">
-                  <li>CodeFest Champion</li>
+                  <li>
+                    Completed self-paced training program focused on client service
+                    delivery skills.
+                  </li>
+                  <li>
+                    Gained hands-on experience in website development using ASP, Microsoft
+                    SQL Server, Bootstrap, HTML, CSS, JavaScript, and other Microsoft
+                    Tools.
+                  </li>
+                  <li>
+                    Developed proficiency in delivering leading-edge services to clients
+                    through practical application of acquired skills.
+                  </li>
                 </ul>
-                <h4 className="uppercase text-[18px] text-darkCyan font-semibold font-poppins leading-[18px]">
-                  Senior Highschool
-                </h4>
-                <div className="w-[156px] h-[35px] font-raleway font-semibold bg-[#d3dbe9] rounded-sm flex justify-center items-center">
-                  2019
-                </div>
-                <ul className="list-disc ml-6 flex flex-col gap-2">
-                  <li>CodeFest Local Level</li>
-                  <li>CodeFest Cluster Level</li>
-                  <li> Graduated with Honors</li>
-                </ul>
-                <a
-                  href="https://drive.google.com/file/d/1cGnLxMTYS8nxDrqsS75Xk-Ocut_CsTV2/view?usp=sharing"
-                  target="_blank"
-                >
-                  <p className="mt-2 text-darkCyan underline">
-                    Click to see my Certificates
-                  </p>
-                </a>
               </div>
             </div>
           </div>
@@ -673,9 +656,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p className="mt-2 font-bold hover:text-darkCyan">
-                  Digiserve (C# / SQL)
-                </p>
+                <p className="mt-2 font-bold hover:text-darkCyan">Digiserve (C# / SQL)</p>
               </a>
             </div>
 
@@ -865,9 +846,7 @@ function App() {
                 </div>
                 <div className="flex flex-col">
                   <h2 className="font-raleway text-[22px] font-bold">Call:</h2>
-                  <p className="font-poppins text-[#728394] text-[14px]">
-                    09452272264
-                  </p>
+                  <p className="font-poppins text-[#728394] text-[14px]">09452272264</p>
                 </div>
               </div>
               <div className="w-full">
