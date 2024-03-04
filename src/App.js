@@ -222,7 +222,7 @@ function App() {
             ONLINE EXPERIENCE
           </h1>
           <p className="text-[15px] font-poppins leading-[30px] lg:text-[17px] lg:mt-4">
-            Meet Jastoni Villanueva. A 22-year old web developer in
+            Meet Jastoni Villanueva. A 23-year old web developer in
             <br /> STI College Global City
           </p>
           <a
@@ -321,10 +321,10 @@ function App() {
                 </ul>
                 <ul className="list-disc md:ml-14">
                   <li>
-                    <span className="font-bold">Age: </span> 22
+                    <span className="font-bold">Age: </span> 23
                   </li>
                   <li>
-                    <span className="font-bold">Year: </span> 4th Year College
+                    <span className="font-bold">Year: </span> Gradruated
                   </li>
                   <li>
                     <span className="font-bold">Email: </span> vjastoni13@gmail.com
